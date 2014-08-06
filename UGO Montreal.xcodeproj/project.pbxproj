@@ -43,6 +43,10 @@
 		0CBB62E8199173F5001A06D0 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DD199173F5001A06D0 /* AFURLRequestSerialization.m */; };
 		0CBB62E9199173F5001A06D0 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */; };
 		0CBB62EA199173F5001A06D0 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */; };
+		0CF022891991B489008EDCBD /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF022861991B489008EDCBD /* Persona.m */; };
+		0CF0228A1991B489008EDCBD /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF022881991B489008EDCBD /* Venue.m */; };
+		0CF0228E1991B869008EDCBD /* PersonaCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0228D1991B869008EDCBD /* PersonaCard.m */; };
+		0CF022901991B8FE008EDCBD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF0228F1991B8FE008EDCBD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,13 @@
 		0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		0CBB62E0199173F5001A06D0 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		0CF022851991B489008EDCBD /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
+		0CF022861991B489008EDCBD /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persona.m; sourceTree = "<group>"; };
+		0CF022871991B489008EDCBD /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		0CF022881991B489008EDCBD /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		0CF0228C1991B869008EDCBD /* PersonaCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonaCard.h; sourceTree = "<group>"; };
+		0CF0228D1991B869008EDCBD /* PersonaCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonaCard.m; sourceTree = "<group>"; };
+		0CF0228F1991B8FE008EDCBD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF022901991B8FE008EDCBD /* QuartzCore.framework in Frameworks */,
 				0CBB626D19916112001A06D0 /* CoreGraphics.framework in Frameworks */,
 				0CBB626F19916112001A06D0 /* UIKit.framework in Frameworks */,
 				0CBB626B19916112001A06D0 /* Foundation.framework in Frameworks */,
@@ -165,6 +177,7 @@
 		0CBB626919916112001A06D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CF0228F1991B8FE008EDCBD /* QuartzCore.framework */,
 				0CBB626A19916112001A06D0 /* Foundation.framework */,
 				0CBB626C19916112001A06D0 /* CoreGraphics.framework */,
 				0CBB626E19916112001A06D0 /* UIKit.framework */,
@@ -176,10 +189,10 @@
 		0CBB627019916112001A06D0 /* UGO Montreal */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB62CE199173F5001A06D0 /* AFNetworking */,
+				0CF0228B1991B851008EDCBD /* Views */,
+				0CF022841991B42F008EDCBD /* Models */,
+				0CF022831991B41C008EDCBD /* Librairies */,
 				0CBB62A919916265001A06D0 /* Controllers */,
-				0CBB629F199161E0001A06D0 /* MDCParallax */,
-				0CBB62AE199163AD001A06D0 /* QMBParallax */,
 				0CBB627919916112001A06D0 /* AppDelegate.h */,
 				0CBB62AC199162AC001A06D0 /* assets */,
 				0CBB627A19916112001A06D0 /* AppDelegate.m */,
@@ -306,6 +319,36 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		0CF022831991B41C008EDCBD /* Librairies */ = {
+			isa = PBXGroup;
+			children = (
+				0CBB62CE199173F5001A06D0 /* AFNetworking */,
+				0CBB629F199161E0001A06D0 /* MDCParallax */,
+				0CBB62AE199163AD001A06D0 /* QMBParallax */,
+			);
+			name = Librairies;
+			sourceTree = "<group>";
+		};
+		0CF022841991B42F008EDCBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CF022851991B489008EDCBD /* Persona.h */,
+				0CF022861991B489008EDCBD /* Persona.m */,
+				0CF022871991B489008EDCBD /* Venue.h */,
+				0CF022881991B489008EDCBD /* Venue.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0CF0228B1991B851008EDCBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CF0228C1991B869008EDCBD /* PersonaCard.h */,
+				0CF0228D1991B869008EDCBD /* PersonaCard.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF022891991B489008EDCBD /* Persona.m in Sources */,
 				0CBB62E2199173F5001A06D0 /* AFHTTPRequestOperation.m in Sources */,
 				0CBB62A2199161EB001A06D0 /* MDCParallaxView.m in Sources */,
 				0CBB627B19916112001A06D0 /* AppDelegate.m in Sources */,
@@ -427,10 +471,12 @@
 				0CBB62C419916524001A06D0 /* VenueViewController.m in Sources */,
 				0CBB62E9199173F5001A06D0 /* AFURLResponseSerialization.m in Sources */,
 				0CBB62A51991624C001A06D0 /* KingViewController.m in Sources */,
+				0CF0228E1991B869008EDCBD /* PersonaCard.m in Sources */,
 				0CBB62B7199164C2001A06D0 /* ParallaxPhotoViewController.m in Sources */,
 				0CBB62E4199173F5001A06D0 /* AFHTTPSessionManager.m in Sources */,
 				0CBB62B3199163CC001A06D0 /* QMBParallaxScrollViewController.m in Sources */,
 				0CBB62CD199173CC001A06D0 /* SubCategoriesViewController.m in Sources */,
+				0CF0228A1991B489008EDCBD /* Venue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +685,7 @@
 				0CBB629B19916112001A06D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CBB629C19916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MontrealTests" */ = {
 			isa = XCConfigurationList;
@@ -647,6 +694,7 @@
 				0CBB629E19916112001A06D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

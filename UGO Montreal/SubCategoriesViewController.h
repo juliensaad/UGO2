@@ -7,7 +7,11 @@
 //
 
 #import "KingViewController.h"
+#import "Persona.h"
+#import "Venue.h"
+#import "PersonaCard.h"
 
 @interface SubCategoriesViewController : KingViewController
 
+@property NSMutableArray* venuesAndPersonas;
 @end
