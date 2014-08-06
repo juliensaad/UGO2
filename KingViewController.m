@@ -29,7 +29,9 @@
     // Do any additional setup after loading the view.
     [self.navigationController.navigationBar setOpaque:YES];
     [self.navigationController.navigationBar setTranslucent:NO];
-    
+
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(UGOTURQUOISE);
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning

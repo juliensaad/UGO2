@@ -28,8 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = UIColorFromRGB(UGOLIGHTGRAY);
+  
+    self.view.backgroundColor = UIColorFromRGB(UGO_LIGHTGRAY);
     _venuesAndPersonas = [[NSMutableArray alloc] init];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -74,10 +74,17 @@
 }
 
 -(void)generateScroll{
-    PersonaCard * p = [[PersonaCard alloc] initWithNumberOfVenues:2 andY:20];
-    [self.view addSubview:p];
     
-    [p setPersona:[_venuesAndPersonas objectAtIndex:0]];
+    int currentY = 10;
+    for(Persona* pers in _venuesAndPersonas){
+        PersonaCard * p = [[PersonaCard alloc] initWithNumberOfVenues:pers.venues.count andY:currentY];
+        [self.view addSubview:p];
+        
+        [p setPersona:pers];
+        
+        currentY+= p.frame.size.height;
+        currentY+= 10; // cards padding
+    }
 }
 
 - (void)didReceiveMemoryWarning

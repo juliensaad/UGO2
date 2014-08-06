@@ -7,6 +7,7 @@
 //
 
 #import "PersonaCard.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @implementation PersonaCard
 
@@ -45,7 +46,7 @@
 }
 
 #define FACEFRAME 50
-#define LABEL_HEIGHT 40
+#define LABEL_HEIGHT 20
 -(void)setPersona:(Persona*)p{
     
     // Create the top view
@@ -55,33 +56,53 @@
     bottomLine.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     [personaView addSubview:bottomLine];
     
-    UIImageView* face = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
-    
+    UIImageView* face = [[UIImageView alloc] init];
+   
     [face setFrame:CGRectMake(XPADDING, PersonaHeight/2-FACEFRAME/2, FACEFRAME, FACEFRAME)];
     face.layer.masksToBounds = YES;
     face.layer.cornerRadius = FACEFRAME/2;
-    
     [personaView addSubview:face];
+    face.contentMode = UIViewContentModeScaleAspectFill;
+    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    
+    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",IMG_URL,p.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        face.image = image;
+        NSLog(@"%@", [NSString stringWithFormat:@"%@/persona%@.jpg",IMG_URL,p.personaId]);
+    }];
     
     [self addSubview:personaView];
     
     // Iterate to create all the other views
-    
     int i = 0;
     int currentY = 0;
     for(Venue* v in p.venues){
         currentY = PersonaHeight + RowHeight*i;
-        UIView* venueView = [[UIView alloc] initWithFrame:CGRectMake(0, currentY, self.frame.size.width, RowHeight)];
+        UIButton* venueView = [[UIButton alloc] initWithFrame:CGRectMake(0, currentY, self.frame.size.width, RowHeight)];
         
         UIView* bottomLineVenue = [[UIView alloc] initWithFrame:CGRectMake(XPADDING, RowHeight-0.5, self.frame.size.width-XPADDING, 0.5)];
         bottomLineVenue.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
-        [venueView addSubview:bottomLineVenue];
-        
-        UILabel* l = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING, 10, self.frame.size.width-XPADDING, LABEL_HEIGHT)];
+
+        UILabel* l = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING, 18, self.frame.size.width-XPADDING, LABEL_HEIGHT)];
         l.text = v.name;
-        l.textColor = [UIColor blackColor];
+        l.textColor = UIColorFromRGB(TITLE_COLOR_DARK);
+        l.font = [UIFont fontWithName:@"OpenSans-Semibold" size:14.0f];
         
+        UILabel* subtitle = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING, 14+LABEL_HEIGHT, self.frame.size.width-XPADDING*4, LABEL_HEIGHT)];
+        subtitle.text = v.descriptionEn;
+        subtitle.textColor = UIColorFromRGB(SUBTITLE_COLOR_DARK);
+        subtitle.font = [UIFont fontWithName:@"OpenSans" size:12.0f];
+        
+        UIImageView* arrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"forward-arrow"]];
+        arrow.frame = CGRectMake(self.frame.size.width-XPADDING-arrow.frame.size.width, RowHeight/2-arrow.frame.size.height/2, arrow.frame.size.width, arrow.frame.size.height);
+        arrow.alpha = 0.75;
+        
+        [venueView addSubview:arrow];
+        [venueView addSubview:bottomLineVenue];
         [venueView addSubview:l];
+        [venueView addSubview:subtitle];
         
         [self addSubview:venueView];
         i++;
