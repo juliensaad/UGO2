@@ -11,6 +11,7 @@
 
 @interface VenueViewController ()
 
+@property CGRect initialFrame;
 @end
 
 @implementation VenueViewController
@@ -26,14 +27,27 @@
     [super viewDidLoad];
     
     [self.scrollView setContentSize:CGSizeMake(320, 0)];
-	
     
+    NSLog(@"%@",self.venue.name);
+    _descriptionTV.delegate = self;
+    self.nameLabel.text = _venue.name;
+    self.descriptionTV.text = _venue.descriptionEn;
+    self.descriptionTV.font = [UIFont fontWithName:@"OpenSans" size:15.0f];
+    self.descriptionTV.textColor = UIColorFromRGB(0x546470);
+    
+    _initialFrame = self.navigationController.navigationBar.frame;
+    
+    [self.view layoutIfNeeded];
+    
+    CGSize sizeThatShouldFitTheContent = [_descriptionTV sizeThatFits:_descriptionTV.frame.size];
+    _tvHeightConstraing.constant = sizeThatShouldFitTheContent.height+50;
+    [self.scrollView setContentSize:CGSizeMake(320, sizeThatShouldFitTheContent.height+50+100)];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -45,6 +59,30 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationItem.hidesBackButton = NO;
+    self.navigationItem.hidesBackButton = NO;
+    self.navigationController.navigationBar.alpha = 1.0;
+    [self.navigationController.navigationBar setFrame:_initialFrame];
+    NSLog(@"InitialFrame");
+}
+
+-(IBAction)detailsClick:(id)sender{
+    self.navigationController.navigationItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = YES;
+    [UIView animateWithDuration:0.7
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.navigationController.navigationBar setFrame:CGRectMake(0, 0, yScreenWidth, yScreenHeight)];
+                         
+
+                     }
+                     completion:^(BOOL finished){
+                         [self performSegueWithIdentifier:@"detailsView" sender:self];
+                     }];
+}
 
 #pragma mark - QMBParallaxScrollViewHolder
 
@@ -56,5 +94,7 @@
 - (IBAction)closeButtonTouchUpInside:(id)sender{
     [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 @end

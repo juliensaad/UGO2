@@ -15,5 +15,17 @@
 #define TITLE_COLOR_DARK 0x555555
 #define SUBTITLE_COLOR_DARK 0x959595
 
-#define IMG_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/personas"
+/*#define PERSONA_URL @"http://thirdbridge.net/ugoadmin/assets/img/personas"
+
+#define ICON_URL @"http://thirdbridge.net/ugoadmin/assets/img/icon"
+
+#define REQUEST_URL @"http://thirdbridge.net/ugoadmin/index.php/appservice/getVenuesAndPersonasFromTag"*/
+
+#define PERSONA_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/personas"
+
+#define ICON_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/icon"
+
+#define REQUEST_URL @"http://127.0.0.1:8888/ugo_dev_2/index.php/appservice/getVenuesAndPersonasFromTag"
+
+
 #endif

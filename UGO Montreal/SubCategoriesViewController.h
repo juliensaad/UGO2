@@ -12,6 +12,8 @@
 #import "PersonaCard.h"
 
 @interface SubCategoriesViewController : KingViewController
+- (IBAction)backClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property NSMutableArray* venuesAndPersonas;
 @end

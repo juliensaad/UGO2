@@ -7,11 +7,16 @@
 //
 
 #import "SamplePhotoBrowserViewController.h"
+#import "SDWebImageDownloader.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface SamplePhotoBrowserViewController ()
 
 @property (nonatomic, strong) NSMutableArray *photos;
 
+@property UIImageView* img;
+@property UIImageView* icon;
+@property UIView* iconbg;
 @end
 
 @implementation SamplePhotoBrowserViewController
@@ -20,13 +25,72 @@
 
 - (void)viewDidLoad
 {
-    self.photos = [NSMutableArray array];
-    [self.photos addObject:[UIImage imageNamed:@"background.png"]];
-    [self.photos addObject:[UIImage imageNamed:@"background.png"]];
-    [self.photos addObject:[UIImage imageNamed:@"background.png"]];
-    [self.photos addObject:[UIImage imageNamed:@"background.png"]];
-
+ 
     [super viewDidLoad];
+    
+
+    [self createPersonaImage];
+    [self createIconography];
+
+    [self loadVenueImages];
+    [self createCustomPageControl];
+}
+
+-(void)createIconography{
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    
+    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%d.png",ICON_URL,_venue.icono]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        
+        _iconbg = [[UIView alloc] initWithFrame:CGRectMake(yScreenWidth-100, 20, 50, 50)];
+        _iconbg.backgroundColor = _venue.color;
+        _iconbg.layer.cornerRadius = 25;
+        _iconbg.layer.borderWidth = 0;
+        
+        
+        [self.view addSubview:_iconbg];
+        
+        _icon = [[UIImageView alloc] initWithImage:image];
+
+        
+        _icon.frame = CGRectMake(yScreenWidth-90, 30, 30, 30);
+        _icon.contentMode = UIViewContentModeScaleAspectFit;
+        
+        [self.view addSubview:_icon];
+
+    }];
+
+}
+-(void)createPersonaImage{
+   
+    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    
+    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",PERSONA_URL,_venue.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        _img = [[UIImageView alloc] initWithImage:image];
+        [self.view addSubview:_img];
+        
+        _img.frame = CGRectMake(yScreenWidth-65, 20, 50, 50);
+        _img.layer.cornerRadius = _img.frame.size.width/2;
+        _img.layer.borderColor = [UIColor whiteColor].CGColor;
+        _img.layer.borderWidth = 1.5;
+        _img.contentMode = UIViewContentModeScaleAspectFill;
+        _img.layer.masksToBounds = YES;
+        [self performSelector:@selector(bringImgFront) withObject:self afterDelay:0.1 ];
+    }];
+
+}
+
+-(void)bringImgFront{
+    [self.view bringSubviewToFront:_iconbg];
+    [self.view bringSubviewToFront:_icon];
+    [self.view bringSubviewToFront:_img];
+}
+
+-(void)createCustomPageControl{
     UINavigationController *navController = self.navigationController;
     navController.delegate = self;
     
@@ -49,8 +113,21 @@
      selector:@selector(currentPageChange:)
      name:@"currentPageChange"
      object:nil];
+}
+
+-(void)loadVenueImages{
+    self.photos = [NSMutableArray array];
     
-    
+    for(int i = 0;i<_venue.imgUrls.count;i++){
+        [self.photos addObject:[NSURL URLWithString:[_venue.imgUrls objectAtIndex:i]]];
+    }
+
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    self.pageControl.hidden = YES;
+}
+-(void)viewWillAppear:(BOOL)animated{
+    self.pageControl.hidden = NO;
 }
 
 -(void)currentPageChange:(NSNotification *)notification
@@ -60,7 +137,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"ALERT!!!");
+
 }
 
 - (NSArray *) arrayWithImages

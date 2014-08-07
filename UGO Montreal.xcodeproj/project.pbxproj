@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1AD6B31993E95D00E9BCE5 /* TNResizableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6B21993E95D00E9BCE5 /* TNResizableTextView.m */; };
+		0C6008B01992943E00EEFA5A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CF022981991C45A008EDCBD /* OpenSans-Regular.ttf */; };
+		0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDA199252B9001E4A04 /* fav-button@2x.png */; };
+		0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDC199252EC001E4A04 /* info-button@2x.png */; };
+		0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C730FDF19926496001E4A04 /* DetailsViewController.m */; };
 		0CBB626B19916112001A06D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626A19916112001A06D0 /* Foundation.framework */; };
 		0CBB626D19916112001A06D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626C19916112001A06D0 /* CoreGraphics.framework */; };
 		0CBB626F19916112001A06D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626E19916112001A06D0 /* UIKit.framework */; };
@@ -82,6 +87,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1AD6B11993E95D00E9BCE5 /* TNResizableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNResizableTextView.h; sourceTree = "<group>"; };
+		0C1AD6B21993E95D00E9BCE5 /* TNResizableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNResizableTextView.m; sourceTree = "<group>"; };
+		0C730FDA199252B9001E4A04 /* fav-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-button@2x.png"; sourceTree = "<group>"; };
+		0C730FDC199252EC001E4A04 /* info-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-button@2x.png"; sourceTree = "<group>"; };
+		0C730FDE19926496001E4A04 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		0C730FDF19926496001E4A04 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		0CBB626719916112001A06D0 /* UGO Montreal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UGO Montreal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB626A19916112001A06D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CBB626C19916112001A06D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -218,6 +229,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1AD6B01993E95D00E9BCE5 /* resizableTextView-master */ = {
+			isa = PBXGroup;
+			children = (
+				0C1AD6B11993E95D00E9BCE5 /* TNResizableTextView.h */,
+				0C1AD6B21993E95D00E9BCE5 /* TNResizableTextView.m */,
+			);
+			path = "resizableTextView-master";
+			sourceTree = "<group>";
+		};
 		0CBB625E19916112001A06D0 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +341,8 @@
 				0CBB62B6199164C2001A06D0 /* ParallaxPhotoViewController.m */,
 				0CBB62A31991624C001A06D0 /* KingViewController.h */,
 				0CBB62A41991624C001A06D0 /* KingViewController.m */,
+				0C730FDE19926496001E4A04 /* DetailsViewController.h */,
+				0C730FDF19926496001E4A04 /* DetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +362,8 @@
 		0CBB62AD199162B1001A06D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0C730FDC199252EC001E4A04 /* info-button@2x.png */,
+				0C730FDA199252B9001E4A04 /* fav-button@2x.png */,
 				0CBB62C619916D24001A06D0 /* ugo-back@2x.png */,
 				0CF022991991C5AB008EDCBD /* forward-arrow@2x.png */,
 				0CBB62AA199162AA001A06D0 /* background.png */,
@@ -393,6 +417,7 @@
 		0CF022831991B41C008EDCBD /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
+				0C1AD6B01993E95D00E9BCE5 /* resizableTextView-master */,
 				0CF0229B1991C768008EDCBD /* SDWebImage */,
 				0CBB62CE199173F5001A06D0 /* AFNetworking */,
 				0CBB629F199161E0001A06D0 /* MDCParallax */,
@@ -540,11 +565,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6008B01992943E00EEFA5A /* OpenSans-Regular.ttf in Resources */,
 				0CBB62C719916D24001A06D0 /* ugo-back@2x.png in Resources */,
 				0CF022CF1991C8FE008EDCBD /* placeholder.png in Resources */,
 				0CBB62C019916504001A06D0 /* KICamera.png in Resources */,
 				0CF022D01991C8FE008EDCBD /* placeholder@2x.png in Resources */,
+				0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */,
 				0CF022951991C3DB008EDCBD /* OpenSans-Bold.ttf in Resources */,
+				0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */,
 				0CBB628319916112001A06D0 /* Images.xcassets in Resources */,
 				0CF022971991C3DB008EDCBD /* OpenSans-Semibold.ttf in Resources */,
 				0CF0229A1991C5AB008EDCBD /* forward-arrow@2x.png in Resources */,
@@ -602,6 +630,7 @@
 				0CBB62E9199173F5001A06D0 /* AFURLResponseSerialization.m in Sources */,
 				0CBB62A51991624C001A06D0 /* KingViewController.m in Sources */,
 				0CF0228E1991B869008EDCBD /* PersonaCard.m in Sources */,
+				0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */,
 				0CF022C11991C768008EDCBD /* SDWebImageDecoder.m in Sources */,
 				0CBB62B7199164C2001A06D0 /* ParallaxPhotoViewController.m in Sources */,
 				0CBB62E4199173F5001A06D0 /* AFHTTPSessionManager.m in Sources */,
@@ -609,6 +638,7 @@
 				0CBB62CD199173CC001A06D0 /* SubCategoriesViewController.m in Sources */,
 				0CF022C51991C768008EDCBD /* SDWebImagePrefetcher.m in Sources */,
 				0CF022BD1991C768008EDCBD /* MKAnnotationView+WebCache.m in Sources */,
+				0C1AD6B31993E95D00E9BCE5 /* TNResizableTextView.m in Sources */,
 				0CF022C71991C768008EDCBD /* UIImage+GIF.m in Sources */,
 				0CF0228A1991B489008EDCBD /* Venue.m in Sources */,
 			);

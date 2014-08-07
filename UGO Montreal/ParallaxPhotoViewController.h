@@ -7,9 +7,11 @@
 //
 
 #import "QMBParallaxScrollViewController.h"
+#import "Venue.h"
 
 @interface ParallaxPhotoViewController : QMBParallaxScrollViewController<QMBParallaxScrollViewControllerDelegate>
 
 - (IBAction) dismiss:(id)sender;
 
+@property Venue *venue;
 @end

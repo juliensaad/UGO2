@@ -8,12 +8,16 @@
 
 #import "SubCategoriesViewController.h"
 #import "AFNetworking.h"
+#import "ParallaxPhotoViewController.h"
 
 @interface SubCategoriesViewController ()
+
+
 
 @end
 
 @implementation SubCategoriesViewController
+int currentVenue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,21 +40,21 @@
     
     NSDictionary *parameters = @{@"id": @"156"};
     
-    [manager POST:@"http://127.0.0.1:8888/ugo_dev_2/index.php/appservice/getVenuesAndPersonasFromTag" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:REQUEST_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         
         for(NSDictionary* d in responseObject){
             Persona* p = [[Persona alloc]init];
-            p.personaDescription = [d objectForKey:@"description"];
-            p.personaDescriptionFr = [d objectForKey:@"description_fr"];
+            p.personaDescription = ISFRENCH?[d objectForKey:@"description_fr"]:[d objectForKey:@"description"];
+
             p.personaId = [d objectForKey:@"id"];
-            p.name = [d objectForKey:@"name"];
-            p.personaNameFr = [d objectForKey:@"name_fr"];
+            p.name = ISFRENCH?[d objectForKey:@"name_fr"]:[d objectForKey:@"name"];
+           
             
             for(NSDictionary* t in [d objectForKey:@"venues"]){
                 Venue* v = [[Venue alloc] init];
                 v.bestTime = [t objectForKey:@"best_time"];
-                v.descriptionEn = [t objectForKey:@"description_en"];
+                v.descriptionEn = ISFRENCH?[t objectForKey:@"description_fr"]:[t objectForKey:@"description_en"];
                 v.descriptionFr = [t objectForKey:@"description_fr"];
                 v.fbUrl = [t objectForKey:@"facebook_url"];
                 v.icono = [[t objectForKey:@"iconography"] intValue];
@@ -59,7 +63,14 @@
                 v.type = [[t objectForKey:@"type"] intValue];
                 v.phoneNumber = [t objectForKey:@"phone"];
                 v.name = [t objectForKey:@"name"];
-
+                v.venueId = [t objectForKey:@"id"];
+                v.color = UIColorFromRGB([[t objectForKey:@"color"] intValue]);
+                v.personaId = p.personaId;
+                v.imgUrls = [[NSMutableArray alloc] init];
+                for(NSDictionary* im in [t objectForKey:@"images"]){
+                    [v.imgUrls addObject:[im objectForKey:@"url"]];
+                }
+                
                 [p.venues addObject:v];
             }
             
@@ -78,19 +89,45 @@
     int currentY = 10;
     for(Persona* pers in _venuesAndPersonas){
         PersonaCard * p = [[PersonaCard alloc] initWithNumberOfVenues:pers.venues.count andY:currentY];
-        [self.view addSubview:p];
+        [self.scrollView addSubview:p];
         
-        [p setPersona:pers];
+        [p setPersona:pers andSelector:@selector(nextPage:) andSender:self];
         
         currentY+= p.frame.size.height;
         currentY+= 10; // cards padding
+        
+        
     }
+    [self.scrollView setContentSize:CGSizeMake(yScreenWidth, currentY+65)];
+}
+
+-(void)nextPage:(id)sender{
+    currentVenue = [sender tag];
+    [self performSegueWithIdentifier:@"DescriptionSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    Venue* nextVenue;
+    for(Persona*pers in _venuesAndPersonas){
+        for(Venue* v in pers.venues){
+            if([v.venueId intValue]==currentVenue){
+                nextVenue = v;
+            }
+        }
+    }
+    
+    [(ParallaxPhotoViewController*)segue.destinationViewController setVenue:nextVenue];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationItem.title = @"Fancy Drinks";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 /*
@@ -104,4 +141,7 @@
 }
 */
 
+- (IBAction)backClick:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

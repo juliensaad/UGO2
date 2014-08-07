@@ -22,6 +22,7 @@
 @property int icono;
 @property int price;
 
+@property NSString* personaId;
 
 @property UIColor* color;
 

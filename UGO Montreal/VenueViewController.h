@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "QMBParallaxScrollViewController.h"
 #import "KingViewController.h"
-@interface VenueViewController : KingViewController<QMBParallaxScrollViewHolder, UIScrollViewDelegate, UIWebViewDelegate>
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+#import "Venue.h"
+#import "TNResizableTextView.h"
 
+@interface VenueViewController : KingViewController<QMBParallaxScrollViewHolder, UIScrollViewDelegate, UIWebViewDelegate, UITextViewDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTV;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tvHeightConstraing;
+
+@property Venue* venue;
 @end

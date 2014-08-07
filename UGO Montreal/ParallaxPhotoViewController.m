@@ -25,15 +25,17 @@
     [super viewDidLoad];
     self.sampleTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SamplePhotoBrowserViewController"];
     
-    VenueViewController *v = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueViewController"];
+    _sampleTopViewController.venue = _venue;
     
-    [self setupWithTopViewController:self.sampleTopViewController andTopHeight:320 andBottomViewController:v];
+    VenueViewController *v = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueViewController"];
+    v.venue = _venue;
+    [self setupWithTopViewController:self.sampleTopViewController andTopHeight:250 andBottomViewController:v];
     
     self.delegate = self;
 }
 
 - (IBAction) dismiss:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

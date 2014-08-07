@@ -47,7 +47,7 @@
 
 #define FACEFRAME 50
 #define LABEL_HEIGHT 20
--(void)setPersona:(Persona*)p{
+-(void)setPersona:(Persona*)p andSelector:(SEL)selector andSender:(id)sender{
     
     // Create the top view
     UIView* personaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, PersonaHeight)];
@@ -64,13 +64,30 @@
     [personaView addSubview:face];
     face.contentMode = UIViewContentModeScaleAspectFill;
     
+    
+    UILabel* personaName = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING+10+face.frame.size.width, 14, self.frame.size.width, 30)];
+    
+    personaName.text = p.name;
+    personaName.font = [UIFont fontWithName:@"OpenSans-Bold" size:16.0f];
+    personaName.textColor = UIColorFromRGB(UGOTURQUOISE);
+    
+    UILabel* personaDesc = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING+10+face.frame.size.width, 30, self.frame.size.width-(XPADDING+10+face.frame.size.width), 50)];
+    
+    personaDesc.text = p.personaDescription;
+    personaDesc.textColor = UIColorFromRGB(SUBTITLE_COLOR_DARK);
+    personaDesc.font = [UIFont fontWithName:@"OpenSans" size:12.0f];
+    personaDesc.numberOfLines = 2;
+    
+    [personaView addSubview:personaName];
+    [personaView addSubview:personaDesc];
+    
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     
-    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",IMG_URL,p.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",PERSONA_URL,p.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
         face.image = image;
-        NSLog(@"%@", [NSString stringWithFormat:@"%@/persona%@.jpg",IMG_URL,p.personaId]);
+
     }];
     
     [self addSubview:personaView];
@@ -105,6 +122,9 @@
         [venueView addSubview:subtitle];
         
         [self addSubview:venueView];
+        
+        [venueView setTag:[v.venueId intValue]];
+        [venueView addTarget:sender action:selector forControlEvents:UIControlEventTouchUpInside];
         i++;
     }
 }
