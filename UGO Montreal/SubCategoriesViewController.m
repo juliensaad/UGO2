@@ -38,9 +38,9 @@ int currentVenue;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     
-    NSDictionary *parameters = @{@"id": @"156"};
+    NSDictionary *parameters = @{@"id": _tagType};
     
-    [manager POST:REQUEST_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:[NSString stringWithFormat:@"%@/getVenuesAndPersonasFromTag",REQUEST_URL] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         
         for(NSDictionary* d in responseObject){
@@ -126,7 +126,7 @@ int currentVenue;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.navigationItem.title = @"Fancy Drinks";
+    self.navigationItem.title = _tagName;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 

@@ -136,6 +136,7 @@
 - (void)enableTapGestureTopView:(BOOL)enable{
     if (enable) {
         [_backgroundView addGestureRecognizer:self.topViewGestureRecognizer];
+        
     }else {
         [_backgroundView removeGestureRecognizer:self.topViewGestureRecognizer];
     }

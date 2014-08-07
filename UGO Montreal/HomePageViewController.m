@@ -7,6 +7,7 @@
 //
 
 #import "HomePageViewController.h"
+#import "TagsViewController.h"
 
 @interface HomePageViewController ()
 
@@ -21,6 +22,9 @@
         // Custom initialization
     }
     return self;
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [segue.destinationViewController setCategory:segue.identifier];
 }
 
 - (void)viewDidLoad

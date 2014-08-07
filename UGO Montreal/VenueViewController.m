@@ -7,6 +7,7 @@
 //
 
 #import "VenueViewController.h"
+#import "AFNetworking.h"
 
 
 @interface VenueViewController ()
@@ -21,6 +22,39 @@
     
 }
 
+-(NSString *)getUniqueDeviceIdentifierAsString
+{
+    
+    NSString *appName=[[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleNameKey];
+    
+    NSString *strApplicationUUID = [SSKeychain passwordForService:appName account:@"incoding"];
+    if (strApplicationUUID == nil)
+    {
+        strApplicationUUID  = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        [SSKeychain setPassword:strApplicationUUID forService:appName account:@"incoding"];
+    }
+    NSLog(@"%@", strApplicationUUID);
+    return strApplicationUUID;
+}
+
+- (IBAction)favouriteClick:(id)sender {
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary *parameters = @{@"user_id": [self getUniqueDeviceIdentifierAsString],
+                                 @"venue_id":_venue.venueId};
+    
+    [manager POST:[NSString stringWithFormat:@"%@/addFavourite",REQUEST_URL] parameters:parameters
+    success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
+   
+}
 
 - (void)viewDidLoad
 {

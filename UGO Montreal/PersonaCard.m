@@ -17,18 +17,7 @@
 
 #define BottomPadding 0
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.layer.masksToBounds = NO;
-        self.layer.cornerRadius = 8; // if you like rounded corners
-        self.layer.shadowOffset = CGSizeMake(0, 0);
-        self.layer.shadowRadius = 1;
-        self.layer.shadowOpacity = 0.2;
-    }
-    return self;
-}
+
 
 -(id)initWithNumberOfVenues:(int)num andY:(CGFloat)y{
     
@@ -37,8 +26,8 @@
         self.backgroundColor = [UIColor whiteColor];
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 2; // if you like rounded corners
-        self.layer.shadowOffset = CGSizeMake(0, 2);
-        self.layer.shadowRadius = 2;
+        self.layer.shadowOffset = CGSizeMake(0, 1);
+        self.layer.shadowRadius = 1;
         self.layer.shadowOpacity = 0.2;
 
     }

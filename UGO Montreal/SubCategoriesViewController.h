@@ -15,5 +15,9 @@
 - (IBAction)backClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+
+@property NSString* tagType;
+@property NSString* tagName;
+
 @property NSMutableArray* venuesAndPersonas;
 @end

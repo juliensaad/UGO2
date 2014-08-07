@@ -69,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuU-N9-Mnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="-150"/>
+            <point key="canvasLocation" x="163" y="-150"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="tfF-iW-zFK">
@@ -84,12 +84,48 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypI-Nh-kFe">
-                                <rect key="frame" x="118" y="178" width="82" height="30"/>
+                                <rect key="frame" x="119" y="178" width="82" height="30"/>
                                 <state key="normal" title="Eat">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ICf-Du-AZ1" kind="push" id="qBL-PU-rrO"/>
+                                    <segue destination="tAo-Y5-ZbU" kind="push" identifier="0" id="udC-54-G1T"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-xl-dkv">
+                                <rect key="frame" x="119" y="216" width="82" height="30"/>
+                                <state key="normal" title="drink">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tAo-Y5-ZbU" kind="push" identifier="1" id="nxj-bW-fFs"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKx-wK-fHQ">
+                                <rect key="frame" x="119" y="260" width="82" height="30"/>
+                                <state key="normal" title="shop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tAo-Y5-ZbU" kind="push" identifier="2" id="S3l-mh-NU3"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGA-UU-asu">
+                                <rect key="frame" x="119" y="306" width="82" height="30"/>
+                                <state key="normal" title="move">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tAo-Y5-ZbU" kind="push" identifier="3" id="Krq-0P-fhz"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g55-jL-3v1">
+                                <rect key="frame" x="119" y="359" width="82" height="30"/>
+                                <state key="normal" title="learn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tAo-Y5-ZbU" kind="push" identifier="4" id="IaF-pC-dEd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,7 +137,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTm-eC-wOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="-150"/>
+            <point key="canvasLocation" x="642" y="-150"/>
+        </scene>
+        <!--Tags View Controller-->
+        <scene sceneID="TOt-Sz-6qb">
+            <objects>
+                <viewController id="tAo-Y5-ZbU" customClass="TagsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="je9-Dh-CWu"/>
+                        <viewControllerLayoutGuide type="bottom" id="W0a-UQ-eHF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CRG-CQ-5YE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u7c-Ex-5Gy"/>
+                    <connections>
+                        <segue destination="ICf-Du-AZ1" kind="push" identifier="goNext" id="vge-vz-N8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPo-fo-NWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="-150"/>
         </scene>
         <!--Sub Categories View Controller-->
         <scene sceneID="vg7-lh-wLp">
@@ -184,6 +242,9 @@
                                 <state key="normal" image="fav-button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="favouriteClick:" destination="KNG-0I-Uek" eventType="touchUpInside" id="tLt-1H-xcA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,4 +329,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="IaF-pC-dEd"/>
+    </inferredMetricsTieBreakers>
 </document>

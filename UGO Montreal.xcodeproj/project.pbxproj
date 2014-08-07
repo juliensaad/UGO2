@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C1AD6B31993E95D00E9BCE5 /* TNResizableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6B21993E95D00E9BCE5 /* TNResizableTextView.m */; };
+		0C1AD6B5199400E300E9BCE5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1AD6B4199400E300E9BCE5 /* Security.framework */; };
+		0C1AD6BD1994010400E9BCE5 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C1AD6B71994010400E9BCE5 /* SSKeychain.strings */; };
+		0C1AD6BE1994010400E9BCE5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6BA1994010400E9BCE5 /* SSKeychain.m */; };
+		0C1AD6BF1994010400E9BCE5 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6BC1994010400E9BCE5 /* SSKeychainQuery.m */; };
+		0C1AD7221994161B00E9BCE5 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD7211994161B00E9BCE5 /* TagsViewController.m */; };
 		0C6008B01992943E00EEFA5A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CF022981991C45A008EDCBD /* OpenSans-Regular.ttf */; };
 		0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDA199252B9001E4A04 /* fav-button@2x.png */; };
 		0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDC199252EC001E4A04 /* info-button@2x.png */; };
@@ -89,6 +94,14 @@
 /* Begin PBXFileReference section */
 		0C1AD6B11993E95D00E9BCE5 /* TNResizableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNResizableTextView.h; sourceTree = "<group>"; };
 		0C1AD6B21993E95D00E9BCE5 /* TNResizableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNResizableTextView.m; sourceTree = "<group>"; };
+		0C1AD6B4199400E300E9BCE5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0C1AD6B81994010400E9BCE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		0C1AD6B91994010400E9BCE5 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		0C1AD6BA1994010400E9BCE5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		0C1AD6BB1994010400E9BCE5 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		0C1AD6BC1994010400E9BCE5 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		0C1AD7201994161B00E9BCE5 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
+		0C1AD7211994161B00E9BCE5 /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
 		0C730FDA199252B9001E4A04 /* fav-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDC199252EC001E4A04 /* info-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDE19926496001E4A04 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -209,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1AD6B5199400E300E9BCE5 /* Security.framework in Frameworks */,
 				0CF022901991B8FE008EDCBD /* QuartzCore.framework in Frameworks */,
 				0CBB626D19916112001A06D0 /* CoreGraphics.framework in Frameworks */,
 				0CBB626F19916112001A06D0 /* UIKit.framework in Frameworks */,
@@ -238,6 +252,18 @@
 			path = "resizableTextView-master";
 			sourceTree = "<group>";
 		};
+		0C1AD6B61994010400E9BCE5 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				0C1AD6B71994010400E9BCE5 /* SSKeychain.strings */,
+				0C1AD6B91994010400E9BCE5 /* SSKeychain.h */,
+				0C1AD6BA1994010400E9BCE5 /* SSKeychain.m */,
+				0C1AD6BB1994010400E9BCE5 /* SSKeychainQuery.h */,
+				0C1AD6BC1994010400E9BCE5 /* SSKeychainQuery.m */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
 		0CBB625E19916112001A06D0 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +286,7 @@
 		0CBB626919916112001A06D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C1AD6B4199400E300E9BCE5 /* Security.framework */,
 				0CF0228F1991B8FE008EDCBD /* QuartzCore.framework */,
 				0CBB626A19916112001A06D0 /* Foundation.framework */,
 				0CBB626C19916112001A06D0 /* CoreGraphics.framework */,
@@ -343,6 +370,8 @@
 				0CBB62A41991624C001A06D0 /* KingViewController.m */,
 				0C730FDE19926496001E4A04 /* DetailsViewController.h */,
 				0C730FDF19926496001E4A04 /* DetailsViewController.m */,
+				0C1AD7201994161B00E9BCE5 /* TagsViewController.h */,
+				0C1AD7211994161B00E9BCE5 /* TagsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -417,6 +446,7 @@
 		0CF022831991B41C008EDCBD /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
+				0C1AD6B61994010400E9BCE5 /* SSKeychain */,
 				0C1AD6B01993E95D00E9BCE5 /* resizableTextView-master */,
 				0CF0229B1991C768008EDCBD /* SDWebImage */,
 				0CBB62CE199173F5001A06D0 /* AFNetworking */,
@@ -581,6 +611,7 @@
 				0CF022961991C3DB008EDCBD /* OpenSans-Light.ttf in Resources */,
 				0CBB627519916112001A06D0 /* InfoPlist.strings in Resources */,
 				0CBB627E19916112001A06D0 /* Main.storyboard in Resources */,
+				0C1AD6BD1994010400E9BCE5 /* SSKeychain.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +642,7 @@
 				0CBB62CA199173BC001A06D0 /* HomePageViewController.m in Sources */,
 				0CBB62E7199173F5001A06D0 /* AFURLConnectionOperation.m in Sources */,
 				0CBB62E3199173F5001A06D0 /* AFHTTPRequestOperationManager.m in Sources */,
+				0C1AD6BF1994010400E9BCE5 /* SSKeychainQuery.m in Sources */,
 				0CF022CC1991C768008EDCBD /* UIView+WebCacheOperation.m in Sources */,
 				0CBB62BA199164D2001A06D0 /* SamplePhotoBrowserViewController.m in Sources */,
 				0CBB62E5199173F5001A06D0 /* AFNetworkReachabilityManager.m in Sources */,
@@ -621,6 +653,7 @@
 				0CF022C81991C768008EDCBD /* UIImage+MultiFormat.m in Sources */,
 				0CF022C31991C768008EDCBD /* SDWebImageDownloaderOperation.m in Sources */,
 				0CBB62B4199163CC001A06D0 /* UIViewController+QMBParallaxScrollViewController.m in Sources */,
+				0C1AD6BE1994010400E9BCE5 /* SSKeychain.m in Sources */,
 				0CF022CA1991C768008EDCBD /* UIImageView+HighlightedWebCache.m in Sources */,
 				0CBB62E6199173F5001A06D0 /* AFSecurityPolicy.m in Sources */,
 				0CBB62BD199164FB001A06D0 /* KIImagePager.m in Sources */,
@@ -633,6 +666,7 @@
 				0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */,
 				0CF022C11991C768008EDCBD /* SDWebImageDecoder.m in Sources */,
 				0CBB62B7199164C2001A06D0 /* ParallaxPhotoViewController.m in Sources */,
+				0C1AD7221994161B00E9BCE5 /* TagsViewController.m in Sources */,
 				0CBB62E4199173F5001A06D0 /* AFHTTPSessionManager.m in Sources */,
 				0CBB62B3199163CC001A06D0 /* QMBParallaxScrollViewController.m in Sources */,
 				0CBB62CD199173CC001A06D0 /* SubCategoriesViewController.m in Sources */,
@@ -663,6 +697,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0C1AD6B71994010400E9BCE5 /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C1AD6B81994010400E9BCE5 /* en */,
+			);
+			name = SSKeychain.strings;
+			sourceTree = "<group>";
+		};
 		0CBB627319916112001A06D0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -25,7 +25,6 @@
 
 #define ICON_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/icon"
 
-#define REQUEST_URL @"http://127.0.0.1:8888/ugo_dev_2/index.php/appservice/getVenuesAndPersonasFromTag"
-
+#define REQUEST_URL @"http://127.0.0.1:8888/ugo_dev_2/index.php/appservice"
 
 #endif
