@@ -38,7 +38,7 @@ int currentVenue;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     
-    NSDictionary *parameters = @{@"id": _tagType};
+    NSDictionary *parameters = @{@"id": _tagId};
     
     [manager POST:[NSString stringWithFormat:@"%@/getVenuesAndPersonasFromTag",REQUEST_URL] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -71,10 +71,14 @@ int currentVenue;
                     [v.imgUrls addObject:[im objectForKey:@"url"]];
                 }
                 
-                [p.venues addObject:v];
+                NSLog(@"%@", _tagType);
+                NSLog(@"%d", v.type);
+                if([_tagType intValue] == v.type)
+                    [p.venues addObject:v];
             }
             
-            [_venuesAndPersonas addObject:p];
+            if(p.venues.count>0)
+                [_venuesAndPersonas addObject:p];
         }
         
         [self generateScroll];

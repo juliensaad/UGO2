@@ -11,6 +11,7 @@
 #import "SubCategoriesViewController.h"
 @interface TagsViewController ()
 
+@property NSMutableArray* tagTypes;
 @end
 
 @implementation TagsViewController
@@ -42,7 +43,7 @@
         NSLog(@"Error: %@", error);
     }];
 
-    
+
 }
 
 -(void)fillTags:(NSArray*)tags{
@@ -57,6 +58,7 @@
         [l addTarget:self action:@selector(goNext:) forControlEvents:UIControlEventTouchUpInside];
         
         l.tag = [[d objectForKey:@"id"] integerValue];
+
         
         l.backgroundColor = [UIColor redColor];
         [self.view addSubview:l];
@@ -80,9 +82,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[segue destinationViewController] setTagType:[NSString stringWithFormat:@"%d",[sender tag]]];
+    [[segue destinationViewController] setTagId:[NSString stringWithFormat:@"%d",[sender tag]]];
     
     [[segue destinationViewController] setTagName:[[sender titleLabel] text]];
+    [[segue destinationViewController] setTagType:_category];
 }
 
 

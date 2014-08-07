@@ -18,6 +18,7 @@
 
 @property NSString* tagType;
 @property NSString* tagName;
+@property NSString* tagId;
 
 @property NSMutableArray* venuesAndPersonas;
 @end
