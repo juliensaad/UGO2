@@ -19,7 +19,7 @@
 
 #define ICON_URL @"http://thirdbridge.net/ugoadmin/assets/img/icon"
 
-#define REQUEST_URL @"http://thirdbridge.net/ugoadmin/index.php/appservice/getVenuesAndPersonasFromTag"*/
+#define REQUEST_URL @"http://thirdbridge.net/ugoadmin/index.php/appservice"*/
 
 #define PERSONA_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/personas"
 

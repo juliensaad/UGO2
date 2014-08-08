@@ -8,6 +8,8 @@
 
 #import "KingViewController.h"
 
+#import "DemoMenuController.h"
 @interface HomePageViewController : KingViewController
+@property DemoMenuController* sideMenu;
 
 @end

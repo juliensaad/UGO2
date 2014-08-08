@@ -14,7 +14,7 @@
 @property NSString* descriptionFr;
 @property NSString* descriptionEn;
 @property NSString* fbUrl;
-@property NSString* location;
+@property (nonatomic, setter = setLocation:) NSString* location;
 @property NSString* venueId;
 
 @property NSString* phoneNumber;
@@ -32,6 +32,7 @@
 @property NSMutableArray* images;
 
 @property NSString* dBID;
+
 
 
 @end

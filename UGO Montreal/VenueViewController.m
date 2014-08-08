@@ -118,6 +118,10 @@
                      }];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [segue.destinationViewController setVenue:_venue];
+}
+
 #pragma mark - QMBParallaxScrollViewHolder
 
 - (UIScrollView *)scrollViewForParallexController{

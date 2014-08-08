@@ -10,4 +10,12 @@
 
 @implementation Venue
 
+-(void)setLocation:(NSString *)location{
+    location = [location stringByReplacingOccurrencesOfString:@"Montreal" withString:@"\nMontreal"];
+    location = [location stringByReplacingOccurrencesOfString:@"Montréal" withString:@"\nMontréal"];
+    
+    location = [location stringByReplacingOccurrencesOfString:@"Canada" withString:@"\nCanada"];
+    
+    _location = location;
+}
 @end

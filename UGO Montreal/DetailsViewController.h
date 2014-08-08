@@ -7,8 +7,11 @@
 //
 
 #import "KingViewController.h"
+#import "Venue.h"
 
 @interface DetailsViewController : KingViewController
+
 - (IBAction)closeButtonClick:(id)sender;
+@property Venue* venue;
 
 @end

@@ -53,6 +53,22 @@
 		0CBB62E8199173F5001A06D0 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DD199173F5001A06D0 /* AFURLRequestSerialization.m */; };
 		0CBB62E9199173F5001A06D0 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */; };
 		0CBB62EA199173F5001A06D0 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */; };
+		0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC32C199515DB0072CC82 /* call_info@2x.png */; };
+		0CDDC331199515DB0072CC82 /* fav_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC32D199515DB0072CC82 /* fav_info@2x.png */; };
+		0CDDC332199515DB0072CC82 /* fb_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC32E199515DB0072CC82 /* fb_info@2x.png */; };
+		0CDDC333199515DB0072CC82 /* map_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC32F199515DB0072CC82 /* map_info@2x.png */; };
+		0CDDC33619951C410072CC82 /* DemoMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC33519951C410072CC82 /* DemoMenuController.m */; };
+		0CDDC33C19951C500072CC82 /* cellBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC33819951C500072CC82 /* cellBg@2x.png */; };
+		0CDDC33D19951C500072CC82 /* cellBgSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC33919951C500072CC82 /* cellBgSelected@2x.png */; };
+		0CDDC33E19951C500072CC82 /* PaperFoldMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC33B19951C500072CC82 /* PaperFoldMenuController.m */; };
+		0CDDC34D19951D370072CC82 /* FacingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34119951D370072CC82 /* FacingView.m */; };
+		0CDDC34E19951D370072CC82 /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34319951D370072CC82 /* FoldView.m */; };
+		0CDDC34F19951D370072CC82 /* MultiFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34519951D370072CC82 /* MultiFoldView.m */; };
+		0CDDC35019951D370072CC82 /* PaperFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34819951D370072CC82 /* PaperFoldView.m */; };
+		0CDDC35119951D370072CC82 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34A19951D370072CC82 /* ShadowView.m */; };
+		0CDDC35219951D370072CC82 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDC34C19951D370072CC82 /* UIView+Screenshot.m */; };
+		0CDDC354199520CD0072CC82 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC353199520CD0072CC82 /* Icon@2x.png */; };
+		0CDDC356199520E60072CC82 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC355199520E60072CC82 /* LaunchImage@2x.png */; };
 		0CF022891991B489008EDCBD /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF022861991B489008EDCBD /* Persona.m */; };
 		0CF0228A1991B489008EDCBD /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF022881991B489008EDCBD /* Venue.m */; };
 		0CF0228E1991B869008EDCBD /* PersonaCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0228D1991B869008EDCBD /* PersonaCard.m */; };
@@ -167,6 +183,32 @@
 		0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		0CBB62E0199173F5001A06D0 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		0CDDC32C199515DB0072CC82 /* call_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_info@2x.png"; sourceTree = "<group>"; };
+		0CDDC32D199515DB0072CC82 /* fav_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_info@2x.png"; sourceTree = "<group>"; };
+		0CDDC32E199515DB0072CC82 /* fb_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb_info@2x.png"; sourceTree = "<group>"; };
+		0CDDC32F199515DB0072CC82 /* map_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_info@2x.png"; sourceTree = "<group>"; };
+		0CDDC33419951C410072CC82 /* DemoMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoMenuController.h; sourceTree = "<group>"; };
+		0CDDC33519951C410072CC82 /* DemoMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoMenuController.m; sourceTree = "<group>"; };
+		0CDDC33719951C500072CC82 /* PaperFoldMenuControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldMenuControllerDelegate.h; sourceTree = "<group>"; };
+		0CDDC33819951C500072CC82 /* cellBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBg@2x.png"; sourceTree = "<group>"; };
+		0CDDC33919951C500072CC82 /* cellBgSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBgSelected@2x.png"; sourceTree = "<group>"; };
+		0CDDC33A19951C500072CC82 /* PaperFoldMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldMenuController.h; sourceTree = "<group>"; };
+		0CDDC33B19951C500072CC82 /* PaperFoldMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldMenuController.m; sourceTree = "<group>"; };
+		0CDDC34019951D370072CC82 /* FacingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacingView.h; sourceTree = "<group>"; };
+		0CDDC34119951D370072CC82 /* FacingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacingView.m; sourceTree = "<group>"; };
+		0CDDC34219951D370072CC82 /* FoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldView.h; sourceTree = "<group>"; };
+		0CDDC34319951D370072CC82 /* FoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldView.m; sourceTree = "<group>"; };
+		0CDDC34419951D370072CC82 /* MultiFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiFoldView.h; sourceTree = "<group>"; };
+		0CDDC34519951D370072CC82 /* MultiFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiFoldView.m; sourceTree = "<group>"; };
+		0CDDC34619951D370072CC82 /* PaperFoldConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldConstants.h; sourceTree = "<group>"; };
+		0CDDC34719951D370072CC82 /* PaperFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldView.h; sourceTree = "<group>"; };
+		0CDDC34819951D370072CC82 /* PaperFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldView.m; sourceTree = "<group>"; };
+		0CDDC34919951D370072CC82 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
+		0CDDC34A19951D370072CC82 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
+		0CDDC34B19951D370072CC82 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		0CDDC34C19951D370072CC82 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		0CDDC353199520CD0072CC82 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0CDDC355199520E60072CC82 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		0CF022851991B489008EDCBD /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
 		0CF022861991B489008EDCBD /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persona.m; sourceTree = "<group>"; };
 		0CF022871991B489008EDCBD /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
@@ -304,8 +346,8 @@
 				0CF022831991B41C008EDCBD /* Librairies */,
 				0CBB62A919916265001A06D0 /* Controllers */,
 				0CBB627919916112001A06D0 /* AppDelegate.h */,
-				0CBB62AC199162AC001A06D0 /* assets */,
 				0CBB627A19916112001A06D0 /* AppDelegate.m */,
+				0CBB62AC199162AC001A06D0 /* assets */,
 				0CBB627C19916112001A06D0 /* Main.storyboard */,
 				0CBB628219916112001A06D0 /* Images.xcassets */,
 				0CBB62C519916C95001A06D0 /* config.h */,
@@ -356,6 +398,11 @@
 		0CBB62A919916265001A06D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0CDDC33419951C410072CC82 /* DemoMenuController.h */,
+				0CDDC33519951C410072CC82 /* DemoMenuController.m */,
+				0CDDC33719951C500072CC82 /* PaperFoldMenuControllerDelegate.h */,
+				0CDDC33A19951C500072CC82 /* PaperFoldMenuController.h */,
+				0CDDC33B19951C500072CC82 /* PaperFoldMenuController.m */,
 				0CBB62C8199173BC001A06D0 /* HomePageViewController.h */,
 				0CBB62C9199173BC001A06D0 /* HomePageViewController.m */,
 				0CBB62CB199173CC001A06D0 /* SubCategoriesViewController.h */,
@@ -391,6 +438,14 @@
 		0CBB62AD199162B1001A06D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0CDDC355199520E60072CC82 /* LaunchImage@2x.png */,
+				0CDDC353199520CD0072CC82 /* Icon@2x.png */,
+				0CDDC33819951C500072CC82 /* cellBg@2x.png */,
+				0CDDC33919951C500072CC82 /* cellBgSelected@2x.png */,
+				0CDDC32C199515DB0072CC82 /* call_info@2x.png */,
+				0CDDC32D199515DB0072CC82 /* fav_info@2x.png */,
+				0CDDC32E199515DB0072CC82 /* fb_info@2x.png */,
+				0CDDC32F199515DB0072CC82 /* map_info@2x.png */,
 				0C730FDC199252EC001E4A04 /* info-button@2x.png */,
 				0C730FDA199252B9001E4A04 /* fav-button@2x.png */,
 				0CBB62C619916D24001A06D0 /* ugo-back@2x.png */,
@@ -443,9 +498,30 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		0CDDC33F19951D2A0072CC82 /* PaperFold */ = {
+			isa = PBXGroup;
+			children = (
+				0CDDC34019951D370072CC82 /* FacingView.h */,
+				0CDDC34119951D370072CC82 /* FacingView.m */,
+				0CDDC34219951D370072CC82 /* FoldView.h */,
+				0CDDC34319951D370072CC82 /* FoldView.m */,
+				0CDDC34419951D370072CC82 /* MultiFoldView.h */,
+				0CDDC34519951D370072CC82 /* MultiFoldView.m */,
+				0CDDC34619951D370072CC82 /* PaperFoldConstants.h */,
+				0CDDC34719951D370072CC82 /* PaperFoldView.h */,
+				0CDDC34819951D370072CC82 /* PaperFoldView.m */,
+				0CDDC34919951D370072CC82 /* ShadowView.h */,
+				0CDDC34A19951D370072CC82 /* ShadowView.m */,
+				0CDDC34B19951D370072CC82 /* UIView+Screenshot.h */,
+				0CDDC34C19951D370072CC82 /* UIView+Screenshot.m */,
+			);
+			name = PaperFold;
+			sourceTree = "<group>";
+		};
 		0CF022831991B41C008EDCBD /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
+				0CDDC33F19951D2A0072CC82 /* PaperFold */,
 				0C1AD6B61994010400E9BCE5 /* SSKeychain */,
 				0C1AD6B01993E95D00E9BCE5 /* resizableTextView-master */,
 				0CF0229B1991C768008EDCBD /* SDWebImage */,
@@ -596,19 +672,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6008B01992943E00EEFA5A /* OpenSans-Regular.ttf in Resources */,
+				0CDDC354199520CD0072CC82 /* Icon@2x.png in Resources */,
 				0CBB62C719916D24001A06D0 /* ugo-back@2x.png in Resources */,
+				0CDDC332199515DB0072CC82 /* fb_info@2x.png in Resources */,
 				0CF022CF1991C8FE008EDCBD /* placeholder.png in Resources */,
 				0CBB62C019916504001A06D0 /* KICamera.png in Resources */,
 				0CF022D01991C8FE008EDCBD /* placeholder@2x.png in Resources */,
 				0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */,
 				0CF022951991C3DB008EDCBD /* OpenSans-Bold.ttf in Resources */,
+				0CDDC356199520E60072CC82 /* LaunchImage@2x.png in Resources */,
 				0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */,
 				0CBB628319916112001A06D0 /* Images.xcassets in Resources */,
 				0CF022971991C3DB008EDCBD /* OpenSans-Semibold.ttf in Resources */,
+				0CDDC33D19951C500072CC82 /* cellBgSelected@2x.png in Resources */,
 				0CF0229A1991C5AB008EDCBD /* forward-arrow@2x.png in Resources */,
 				0CBB62AB199162AA001A06D0 /* background.png in Resources */,
+				0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */,
 				0CBB62C119916504001A06D0 /* KICamera@2x.png in Resources */,
+				0CDDC33C19951C500072CC82 /* cellBg@2x.png in Resources */,
 				0CF022961991C3DB008EDCBD /* OpenSans-Light.ttf in Resources */,
+				0CDDC331199515DB0072CC82 /* fav_info@2x.png in Resources */,
+				0CDDC333199515DB0072CC82 /* map_info@2x.png in Resources */,
 				0CBB627519916112001A06D0 /* InfoPlist.strings in Resources */,
 				0CBB627E19916112001A06D0 /* Main.storyboard in Resources */,
 				0C1AD6BD1994010400E9BCE5 /* SSKeychain.strings in Resources */,
@@ -630,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDDC34E19951D370072CC82 /* FoldView.m in Sources */,
 				0CF022891991B489008EDCBD /* Persona.m in Sources */,
 				0CF022C61991C768008EDCBD /* UIButton+WebCache.m in Sources */,
 				0CF022C41991C768008EDCBD /* SDWebImageManager.m in Sources */,
@@ -640,12 +725,17 @@
 				0CBB62EA199173F5001A06D0 /* AFURLSessionManager.m in Sources */,
 				0CF022C01991C768008EDCBD /* SDWebImageCompat.m in Sources */,
 				0CBB62CA199173BC001A06D0 /* HomePageViewController.m in Sources */,
+				0CDDC34D19951D370072CC82 /* FacingView.m in Sources */,
 				0CBB62E7199173F5001A06D0 /* AFURLConnectionOperation.m in Sources */,
+				0CDDC35019951D370072CC82 /* PaperFoldView.m in Sources */,
 				0CBB62E3199173F5001A06D0 /* AFHTTPRequestOperationManager.m in Sources */,
+				0CDDC33E19951C500072CC82 /* PaperFoldMenuController.m in Sources */,
 				0C1AD6BF1994010400E9BCE5 /* SSKeychainQuery.m in Sources */,
 				0CF022CC1991C768008EDCBD /* UIView+WebCacheOperation.m in Sources */,
 				0CBB62BA199164D2001A06D0 /* SamplePhotoBrowserViewController.m in Sources */,
 				0CBB62E5199173F5001A06D0 /* AFNetworkReachabilityManager.m in Sources */,
+				0CDDC35119951D370072CC82 /* ShadowView.m in Sources */,
+				0CDDC35219951D370072CC82 /* UIView+Screenshot.m in Sources */,
 				0CF022CB1991C768008EDCBD /* UIImageView+WebCache.m in Sources */,
 				0CF022C91991C768008EDCBD /* UIImage+WebP.m in Sources */,
 				0CF022BF1991C768008EDCBD /* SDImageCache.m in Sources */,
@@ -664,6 +754,7 @@
 				0CBB62A51991624C001A06D0 /* KingViewController.m in Sources */,
 				0CF0228E1991B869008EDCBD /* PersonaCard.m in Sources */,
 				0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */,
+				0CDDC34F19951D370072CC82 /* MultiFoldView.m in Sources */,
 				0CF022C11991C768008EDCBD /* SDWebImageDecoder.m in Sources */,
 				0CBB62B7199164C2001A06D0 /* ParallaxPhotoViewController.m in Sources */,
 				0C1AD7221994161B00E9BCE5 /* TagsViewController.m in Sources */,
@@ -673,6 +764,7 @@
 				0CF022C51991C768008EDCBD /* SDWebImagePrefetcher.m in Sources */,
 				0CF022BD1991C768008EDCBD /* MKAnnotationView+WebCache.m in Sources */,
 				0C1AD6B31993E95D00E9BCE5 /* TNResizableTextView.m in Sources */,
+				0CDDC33619951C410072CC82 /* DemoMenuController.m in Sources */,
 				0CF022C71991C768008EDCBD /* UIImage+GIF.m in Sources */,
 				0CF0228A1991B489008EDCBD /* Venue.m in Sources */,
 			);

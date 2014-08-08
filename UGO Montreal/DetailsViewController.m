@@ -10,6 +10,7 @@
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
 
@@ -28,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self fillVenueInfo];
     self.navigationItem.hidesBackButton = YES;
        [UIView animateWithDuration:0.1
                           delay:0.7
@@ -35,7 +38,7 @@
                      animations:^{
                          [self.navigationController.navigationBar setAlpha:0.0];
                          
-                        
+
                      }
                      completion:^(BOOL finished){
                         
@@ -44,6 +47,9 @@
     
 }
 
+-(void)fillVenueInfo{
+    _addressLabel.text = _venue.location;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

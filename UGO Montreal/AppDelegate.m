@@ -7,13 +7,47 @@
 //
 
 #import "AppDelegate.h"
+#import "DemoMenuController.h"
+#import "HomePageViewController.h"
+
+@interface AppDelegate()
+
+@property (nonatomic, strong) DemoMenuController *menuController;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-52250247-1"];
     
+   
+        
+    // Launch side menu and Main View
+    _menuController = [[DemoMenuController alloc] initWithMenuWidth:80];
+    NSMutableArray *viewControllers = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 1; i++)
+    {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+       
+
+        HomePageViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeController"];
+        UINavigationController* nc = [[UINavigationController alloc]initWithRootViewController:vc];
+        
+        [viewControllers addObject:nc];
+        
+        [vc setSideMenu:_menuController];
+    }
+    
+    [_menuController setViewControllers:viewControllers];
+    
+    [self.window setRootViewController:_menuController];
+
     return YES;
 }
 							
