@@ -9,6 +9,9 @@
 #import "TagsViewController.h"
 #import "AFNetworking.h"
 #import "SubCategoriesViewController.h"
+
+#import "SDWebImageManager.h"
+
 @interface TagsViewController ()
 
 @property NSMutableArray* tagTypes;
@@ -58,11 +61,24 @@
         [l addTarget:self action:@selector(goNext:) forControlEvents:UIControlEventTouchUpInside];
         
         l.tag = [[d objectForKey:@"id"] integerValue];
-
+        l.backgroundColor = UIColorFromRGB(UGO_LIGHTGRAY);
         
-        l.backgroundColor = [UIColor redColor];
+        [l setTitleColor:UIColorFromRGB(TITLE_COLOR_DARK) forState:UIControlStateNormal];
+        [l setTitleColor:UIColorFromRGB(UGOTURQUOISE) forState:UIControlStateHighlighted];
         [self.view addSubview:l];
         NSLog(@"%@", l.titleLabel.text);
+        
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        
+        [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/tag%ld.png",TAGS_URL,(long)l.tag]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            [l setImage:image forState:UIControlStateNormal];
+            [[l imageView] setContentMode:UIViewContentModeScaleAspectFit];
+            NSLog(@"%@",[NSString stringWithFormat:@"%@/tag%ld.png",TAGS_URL,(long)l.tag]);
+            
+        }];
+
         
     }
 }
