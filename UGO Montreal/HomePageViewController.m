@@ -8,12 +8,15 @@
 
 #import "HomePageViewController.h"
 #import "TagsViewController.h"
+#import "HomeTableViewController.h"
 
 @interface HomePageViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *topTitle;
 
 @end
 
 @implementation HomePageViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,14 +26,32 @@
     }
     return self;
 }
+
+- (IBAction)hamburgerClick:(id)sender {
+
+    [_sideMenu showMenu:[[_sideMenu paperFoldView] state]==PaperFoldStateLeftUnfolded?PaperFoldStateDefault:PaperFoldStateLeftUnfolded animated:YES];
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    [segue.destinationViewController setCategory:segue.identifier];
+    
+    [segue.destinationViewController setCategory:[NSString stringWithFormat:@"%d",_nextView]];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navLogo"]];
+    _topTitle.font = [UIFont fontWithName:@"OpenSans-Bold" size:17.0f];
+    
+ /*   UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hamburger"]]];
+    
+    item.target = self;
+    item.action = @selector(hamburger);
+    self.navigationItem.rightBarButtonItem = item;*/
+    
+
 }
 
 - (void)didReceiveMemoryWarning

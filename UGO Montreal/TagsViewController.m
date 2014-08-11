@@ -40,7 +40,7 @@
     NSDictionary *parameters = @{@"type": [NSNumber numberWithInteger:[_category integerValue]]};
     
     [manager POST:[NSString stringWithFormat:@"%@/getTagsFromType",REQUEST_URL] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         [self fillTags:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -66,7 +66,7 @@
         [l setTitleColor:UIColorFromRGB(TITLE_COLOR_DARK) forState:UIControlStateNormal];
         [l setTitleColor:UIColorFromRGB(UGOTURQUOISE) forState:UIControlStateHighlighted];
         [self.view addSubview:l];
-        NSLog(@"%@", l.titleLabel.text);
+        //NSLog(@"%@", l.titleLabel.text);
         
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         
@@ -75,7 +75,7 @@
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             [l setImage:image forState:UIControlStateNormal];
             [[l imageView] setContentMode:UIViewContentModeScaleAspectFit];
-            NSLog(@"%@",[NSString stringWithFormat:@"%@/tag%ld.png",TAGS_URL,(long)l.tag]);
+            //  NSLog(@"%@",[NSString stringWithFormat:@"%@/tag%ld.png",TAGS_URL,(long)l.tag]);
             
         }];
 

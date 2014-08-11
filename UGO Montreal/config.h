@@ -21,7 +21,7 @@
 
 #define ISLOGGEDIN [[[[WSingleton sharedManager] defaults]objectForKey:@"isloggedin"] isEqualToString:@"YES"]
 
-#define ISFRENCH YES//![[[NSLocale preferredLanguages] objectAtIndex:0] isEqualToString:@"en"]
+#define ISFRENCH NO//![[[NSLocale preferredLanguages] objectAtIndex:0] isEqualToString:@"en"]
 
 #define ISIPHONE5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 #define ISIPAD (([[UIScreen mainScreen] bounds].size.height == 1024)?TRUE:FALSE)

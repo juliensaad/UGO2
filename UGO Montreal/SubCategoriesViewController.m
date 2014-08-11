@@ -41,7 +41,7 @@ int currentVenue;
     NSDictionary *parameters = @{@"id": _tagId};
     
     [manager POST:[NSString stringWithFormat:@"%@/getVenuesAndPersonasFromTag",REQUEST_URL] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        // NSLog(@"JSON: %@", responseObject);
         
         for(NSDictionary* d in responseObject){
             Persona* p = [[Persona alloc]init];
@@ -70,9 +70,7 @@ int currentVenue;
                 for(NSDictionary* im in [t objectForKey:@"images"]){
                     [v.imgUrls addObject:[im objectForKey:@"url"]];
                 }
-                
-                NSLog(@"%@", _tagType);
-                NSLog(@"%d", v.type);
+             
                 if([_tagType intValue] == v.type)
                     [p.venues addObject:v];
             }

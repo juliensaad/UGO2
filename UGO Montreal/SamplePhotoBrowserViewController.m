@@ -28,9 +28,9 @@
  
     [super viewDidLoad];
     
-
-    [self createPersonaImage];
     [self createIconography];
+    [self createPersonaImage];
+
 
     [self loadVenueImages];
     [self createCustomPageControl];
@@ -58,6 +58,7 @@
         _icon.contentMode = UIViewContentModeScaleAspectFit;
         
         [self.view addSubview:_icon];
+         [self performSelector:@selector(bringImgFront) withObject:self afterDelay:0.0];
 
     }];
 
@@ -79,7 +80,7 @@
         _img.layer.borderWidth = 1.5;
         _img.contentMode = UIViewContentModeScaleAspectFill;
         _img.layer.masksToBounds = YES;
-        [self performSelector:@selector(bringImgFront) withObject:self afterDelay:0.1 ];
+       
     }];
 
 }

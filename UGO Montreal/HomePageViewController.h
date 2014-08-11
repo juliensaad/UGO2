@@ -12,4 +12,6 @@
 @interface HomePageViewController : KingViewController
 @property DemoMenuController* sideMenu;
 
+@property int nextView;
+
 @end
