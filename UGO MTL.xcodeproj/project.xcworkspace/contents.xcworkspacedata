@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:UGO Montreal.xcodeproj">
+      location = "self:UGO MTL.xcodeproj">
    </FileRef>
 </Workspace>

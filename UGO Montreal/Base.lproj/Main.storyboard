@@ -90,7 +90,7 @@
                                 <color key="textColor" red="0.17254902420000001" green="0.69803923369999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to do?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzz-vI-S30">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What would you like to do?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzz-vI-S30">
                                 <rect key="frame" x="18" y="40" width="260" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
@@ -109,6 +109,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aKf-yp-LpT" firstAttribute="top" secondItem="aXK-2p-Vrh" secondAttribute="bottom" id="R7f-gS-HVT"/>
+                            <constraint firstItem="aXK-2p-Vrh" firstAttribute="top" secondItem="Uzz-vI-S30" secondAttribute="bottom" constant="12" id="X1u-Tx-p7j"/>
+                            <constraint firstItem="aKf-yp-LpT" firstAttribute="top" secondItem="aXK-2p-Vrh" secondAttribute="bottom" id="YKI-Cn-eUp"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -330,7 +332,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-1z-eeq">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-1z-eeq" customClass="UIScrollView">
                                 <rect key="frame" x="6" y="0.0" width="299" height="548"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="gT7-QL-HmW">
@@ -419,6 +421,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.17254902420000001" green="0.69803923369999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="I9i-LS-btP" firstAttribute="top" secondItem="r38-1z-eeq" secondAttribute="bottom" constant="20" id="ZsD-ei-wgb"/>
+                            <constraint firstItem="r38-1z-eeq" firstAttribute="top" secondItem="LMZ-yG-QMn" secondAttribute="top" id="zpN-wR-lOz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uDc-KH-uU4"/>
                     <connections>

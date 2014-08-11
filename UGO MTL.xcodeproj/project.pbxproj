@@ -143,21 +143,21 @@
 		0C730FDC199252EC001E4A04 /* info-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDE19926496001E4A04 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		0C730FDF19926496001E4A04 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		0CBB626719916112001A06D0 /* UGO Montreal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UGO Montreal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBB626719916112001A06D0 /* UGO MTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UGO MTL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB626A19916112001A06D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CBB626C19916112001A06D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0CBB626E19916112001A06D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0CBB627219916112001A06D0 /* UGO Montreal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGO Montreal-Info.plist"; sourceTree = "<group>"; };
+		0CBB627219916112001A06D0 /* UGO MTL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGO MTL-Info.plist"; sourceTree = "<group>"; };
 		0CBB627419916112001A06D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CBB627619916112001A06D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0CBB627819916112001A06D0 /* UGO Montreal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UGO Montreal-Prefix.pch"; sourceTree = "<group>"; };
+		0CBB627819916112001A06D0 /* UGO MTL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UGO MTL-Prefix.pch"; sourceTree = "<group>"; };
 		0CBB627919916112001A06D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CBB627A19916112001A06D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0CBB627D19916112001A06D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CBB628219916112001A06D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0CBB628819916112001A06D0 /* UGO MontrealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UGO MontrealTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBB628819916112001A06D0 /* UGO MTLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UGO MTLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB628919916112001A06D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0CBB629119916112001A06D0 /* UGO MontrealTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGO MontrealTests-Info.plist"; sourceTree = "<group>"; };
+		0CBB629119916112001A06D0 /* UGO MTLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UGO MTLTests-Info.plist"; sourceTree = "<group>"; };
 		0CBB629319916112001A06D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CBB629519916112001A06D0 /* UGO_MontrealTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGO_MontrealTests.m; sourceTree = "<group>"; };
 		0CBB62A0199161EB001A06D0 /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCParallaxView.h; sourceTree = "<group>"; };
@@ -341,8 +341,8 @@
 		0CBB626819916112001A06D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB626719916112001A06D0 /* UGO Montreal.app */,
-				0CBB628819916112001A06D0 /* UGO MontrealTests.xctest */,
+				0CBB626719916112001A06D0 /* UGO MTL.app */,
+				0CBB628819916112001A06D0 /* UGO MTLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,10 +382,10 @@
 		0CBB627119916112001A06D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB627219916112001A06D0 /* UGO Montreal-Info.plist */,
+				0CBB627219916112001A06D0 /* UGO MTL-Info.plist */,
 				0CBB627319916112001A06D0 /* InfoPlist.strings */,
 				0CBB627619916112001A06D0 /* main.m */,
-				0CBB627819916112001A06D0 /* UGO Montreal-Prefix.pch */,
+				0CBB627819916112001A06D0 /* UGO MTL-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 		0CBB629019916112001A06D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB629119916112001A06D0 /* UGO MontrealTests-Info.plist */,
+				0CBB629119916112001A06D0 /* UGO MTLTests-Info.plist */,
 				0CBB629219916112001A06D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -628,9 +628,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CBB626619916112001A06D0 /* UGO Montreal */ = {
+		0CBB626619916112001A06D0 /* UGO MTL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBB629919916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO Montreal" */;
+			buildConfigurationList = 0CBB629919916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MTL" */;
 			buildPhases = (
 				0CBB626319916112001A06D0 /* Sources */,
 				0CBB626419916112001A06D0 /* Frameworks */,
@@ -640,14 +640,14 @@
 			);
 			dependencies = (
 			);
-			name = "UGO Montreal";
+			name = "UGO MTL";
 			productName = "UGO Montreal";
-			productReference = 0CBB626719916112001A06D0 /* UGO Montreal.app */;
+			productReference = 0CBB626719916112001A06D0 /* UGO MTL.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0CBB628719916112001A06D0 /* UGO MontrealTests */ = {
+		0CBB628719916112001A06D0 /* UGO MTLTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBB629C19916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MontrealTests" */;
+			buildConfigurationList = 0CBB629C19916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MTLTests" */;
 			buildPhases = (
 				0CBB628419916112001A06D0 /* Sources */,
 				0CBB628519916112001A06D0 /* Frameworks */,
@@ -658,9 +658,9 @@
 			dependencies = (
 				0CBB628E19916112001A06D0 /* PBXTargetDependency */,
 			);
-			name = "UGO MontrealTests";
+			name = "UGO MTLTests";
 			productName = "UGO MontrealTests";
-			productReference = 0CBB628819916112001A06D0 /* UGO MontrealTests.xctest */;
+			productReference = 0CBB628819916112001A06D0 /* UGO MTLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -680,7 +680,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO Montreal" */;
+			buildConfigurationList = 0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO MTL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -693,8 +693,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CBB626619916112001A06D0 /* UGO Montreal */,
-				0CBB628719916112001A06D0 /* UGO MontrealTests */,
+				0CBB626619916112001A06D0 /* UGO MTL */,
+				0CBB628719916112001A06D0 /* UGO MTLTests */,
 			);
 		};
 /* End PBXProject section */
@@ -825,7 +825,7 @@
 /* Begin PBXTargetDependency section */
 		0CBB628E19916112001A06D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CBB626619916112001A06D0 /* UGO Montreal */;
+			target = 0CBB626619916112001A06D0 /* UGO MTL */;
 			targetProxy = 0CBB628D19916112001A06D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -943,10 +943,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UGO Montreal/UGO Montreal-Prefix.pch";
-				INFOPLIST_FILE = "UGO Montreal/UGO Montreal-Info.plist";
+				GCC_PREFIX_HEADER = "UGO Montreal/UGO MTL-Prefix.pch";
+				INFOPLIST_FILE = "UGO Montreal/UGO MTL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "UGO MTL";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -958,10 +958,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UGO Montreal/UGO Montreal-Prefix.pch";
-				INFOPLIST_FILE = "UGO Montreal/UGO Montreal-Info.plist";
+				GCC_PREFIX_HEADER = "UGO Montreal/UGO MTL-Prefix.pch";
+				INFOPLIST_FILE = "UGO Montreal/UGO MTL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "UGO MTL";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -981,8 +981,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "UGO MontrealTests/UGO MontrealTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "UGO MontrealTests/UGO MTLTests-Info.plist";
+				PRODUCT_NAME = "UGO MTLTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -999,8 +999,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UGO Montreal/UGO Montreal-Prefix.pch";
-				INFOPLIST_FILE = "UGO MontrealTests/UGO MontrealTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "UGO MontrealTests/UGO MTLTests-Info.plist";
+				PRODUCT_NAME = "UGO MTLTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1009,7 +1009,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO Montreal" */ = {
+		0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO MTL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBB629719916112001A06D0 /* Debug */,
@@ -1018,7 +1018,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBB629919916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO Montreal" */ = {
+		0CBB629919916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MTL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBB629A19916112001A06D0 /* Debug */,
@@ -1027,7 +1027,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBB629C19916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MontrealTests" */ = {
+		0CBB629C19916112001A06D0 /* Build configuration list for PBXNativeTarget "UGO MTLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBB629D19916112001A06D0 /* Debug */,

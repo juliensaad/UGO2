@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CBB626619916112001A06D0"
                BuildableName = "UGO Montreal.app"
-               BlueprintName = "UGO Montreal"
-               ReferencedContainer = "container:UGO Montreal.xcodeproj">
+               BlueprintName = "UGO MTL"
+               ReferencedContainer = "container:UGO MTL.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CBB628719916112001A06D0"
                BuildableName = "UGO MontrealTests.xctest"
-               BlueprintName = "UGO MontrealTests"
-               ReferencedContainer = "container:UGO Montreal.xcodeproj">
+               BlueprintName = "UGO MTLTests"
+               ReferencedContainer = "container:UGO MTL.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
             BuildableName = "UGO Montreal.app"
-            BlueprintName = "UGO Montreal"
-            ReferencedContainer = "container:UGO Montreal.xcodeproj">
+            BlueprintName = "UGO MTL"
+            ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
             BuildableName = "UGO Montreal.app"
-            BlueprintName = "UGO Montreal"
-            ReferencedContainer = "container:UGO Montreal.xcodeproj">
+            BlueprintName = "UGO MTL"
+            ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
             BuildableName = "UGO Montreal.app"
-            BlueprintName = "UGO Montreal"
-            ReferencedContainer = "container:UGO Montreal.xcodeproj">
+            BlueprintName = "UGO MTL"
+            ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
