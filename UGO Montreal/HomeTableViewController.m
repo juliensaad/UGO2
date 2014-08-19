@@ -54,6 +54,11 @@
 #pragma mark - Table view data source
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _nextView = indexPath.row;
+    
+    if(_nextView==3)
+        _nextView = 2;
+    else if(_nextView == 2)
+        _nextView = 3;
     ((HomePageViewController*)self.parentViewController).nextView = _nextView;
     [self.parentViewController performSegueWithIdentifier:@"tagSegue" sender:self];
 
@@ -95,10 +100,10 @@
             cell.typeLabel.text = TYPE1;
             break;
         case 2:
-            cell.typeLabel.text = TYPE2;
+            cell.typeLabel.text = TYPE3;
             break;
         case 3:
-            cell.typeLabel.text = TYPE3;
+            cell.typeLabel.text = TYPE2;
             break;
         case 4:
             cell.typeLabel.text = TYPE4;

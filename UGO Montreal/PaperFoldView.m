@@ -127,8 +127,8 @@
     [line setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:0.5]];
 	line.alpha = 0;
 	self.leftDividerLine = line;
-    
-    self.enableLeftFoldDragging = YES;
+
+    self.enableLeftFoldDragging = NO;
 }
 
 - (void)onContentViewPanned:(UIPanGestureRecognizer*)gesture

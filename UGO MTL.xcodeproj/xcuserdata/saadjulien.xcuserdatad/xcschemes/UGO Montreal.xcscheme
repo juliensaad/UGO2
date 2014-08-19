@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CBB626619916112001A06D0"
-               BuildableName = "UGO Montreal.app"
+               BuildableName = "UGO MTL.app"
                BlueprintName = "UGO MTL"
                ReferencedContainer = "container:UGO MTL.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CBB628719916112001A06D0"
-               BuildableName = "UGO MontrealTests.xctest"
+               BuildableName = "UGO MTLTests.xctest"
                BlueprintName = "UGO MTLTests"
                ReferencedContainer = "container:UGO MTL.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
-            BuildableName = "UGO Montreal.app"
+            BuildableName = "UGO MTL.app"
             BlueprintName = "UGO MTL"
             ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
-            BuildableName = "UGO Montreal.app"
+            BuildableName = "UGO MTL.app"
             BlueprintName = "UGO MTL"
             ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CBB626619916112001A06D0"
-            BuildableName = "UGO Montreal.app"
+            BuildableName = "UGO MTL.app"
             BlueprintName = "UGO MTL"
             ReferencedContainer = "container:UGO MTL.xcodeproj">
          </BuildableReference>

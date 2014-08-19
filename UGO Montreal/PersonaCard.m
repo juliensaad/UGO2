@@ -97,7 +97,9 @@
         l.font = [UIFont fontWithName:@"OpenSans-Semibold" size:14.0f];
         
         UILabel* subtitle = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING, 14+LABEL_HEIGHT, self.frame.size.width-XPADDING*4, LABEL_HEIGHT)];
-        subtitle.text = v.descriptionEn;
+        
+        if(![v.shortDesc isKindOfClass:[NSNull class]])
+            subtitle.text = v.shortDesc;
         subtitle.textColor = UIColorFromRGB(SUBTITLE_COLOR_DARK);
         subtitle.font = [UIFont fontWithName:@"OpenSans" size:12.0f];
         

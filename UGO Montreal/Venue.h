@@ -13,6 +13,9 @@
 @property NSString* name;
 @property NSString* descriptionFr;
 @property NSString* descriptionEn;
+
+@property NSString* shortDesc;
+
 @property NSString* fbUrl;
 @property (nonatomic, setter = setLocation:) NSString* location;
 @property NSString* venueId;

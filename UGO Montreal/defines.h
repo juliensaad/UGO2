@@ -22,9 +22,9 @@
 #define REQUEST_URL @"http://thirdbridge.net/ugoadmin/index.php/appservice"
  
 #define TAGS_URL @"http://thirdbridge.net/ugoadmin/assets/img/tags"
- /*
  
-
+ 
+/*
 #define PERSONA_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/personas"
 
 #define ICON_URL @"http://127.0.0.1:8888/ugo_dev_2/assets/img/icon"

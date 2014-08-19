@@ -41,7 +41,7 @@ int currentVenue;
     NSDictionary *parameters = @{@"id": _tagId};
     
     [manager POST:[NSString stringWithFormat:@"%@/getVenuesAndPersonasFromTag",REQUEST_URL] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // NSLog(@"JSON: %@", responseObject);
+         NSLog(@"JSON: %@", responseObject);
         
         for(NSDictionary* d in responseObject){
             Persona* p = [[Persona alloc]init];
@@ -53,9 +53,19 @@ int currentVenue;
             
             for(NSDictionary* t in [d objectForKey:@"venues"]){
                 Venue* v = [[Venue alloc] init];
+                
+                @try {
+                    v.shortDesc = ISFRENCH?[t objectForKey:@"short_desc_fr"]:[t objectForKey:@"short_desc_en"];
+                }
+                @catch (NSException *exception) {
+                    v.shortDesc = ISFRENCH?[t objectForKey:@"description_fr"]:[t objectForKey:@"description_en"];
+                }
+                @finally {
+                    
+                }
+                
                 v.bestTime = [t objectForKey:@"best_time"];
                 v.descriptionEn = ISFRENCH?[t objectForKey:@"description_fr"]:[t objectForKey:@"description_en"];
-                v.descriptionFr = [t objectForKey:@"description_fr"];
                 v.fbUrl = [t objectForKey:@"facebook_url"];
                 v.icono = [[t objectForKey:@"iconography"] intValue];
                 v.location = [t objectForKey:@"location"];

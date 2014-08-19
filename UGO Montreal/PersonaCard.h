@@ -15,5 +15,6 @@
 
 -(id)initWithNumberOfVenues:(int)num andY:(CGFloat)y;
 
--(void)setPersona:(Persona*)p andSelector:(SEL)selector andSender:(id)sender;
+-(void)setPersona:(Persona*)p
+      andSelector:(SEL)selector andSender:(id)sender;
 @end
