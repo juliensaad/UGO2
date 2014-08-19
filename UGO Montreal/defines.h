@@ -32,4 +32,8 @@
 
 #define REQUEST_URL @"http://127.0.0.1:8888/ugo_dev_2/index.php/appservice"
 */
+
+#define lBEST_TIME (ISFRENCH?@"Meilleur temps:":@"Best time:")
+#define lPRICING (ISFRENCH?@"Prix moyen:":@"Average price:")
+
 #endif

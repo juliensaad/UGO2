@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     
     [self fillVenueInfo];
-    self.navigationItem.hidesBackButton = YES;
+   /* self.navigationItem.hidesBackButton = YES;
        [UIView animateWithDuration:0.1
                           delay:0.7
                         options: UIViewAnimationOptionCurveEaseInOut
@@ -43,12 +43,16 @@
                      completion:^(BOOL finished){
                         
                          
-                     }];
+                     }];*/
     
 }
 
 -(void)fillVenueInfo{
     _addressLabel.text = _venue.location;
+    _bestTimeLabel.text = _venue.bestTime;
+    _nameLabel.text = _venue.name;
+    _priceLabel.text = _venue.priceText;
+
 }
 - (void)didReceiveMemoryWarning
 {
@@ -57,7 +61,7 @@
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = NO;
+   /* self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationItem.hidesBackButton = NO;
     self.navigationItem.hidesBackButton = NO;
     [self.navigationController.navigationBar setFrame:CGRectMake(0, 0, yScreenWidth, 66)];
@@ -68,11 +72,11 @@
     [UIView setAnimationDelay:0.4];
     
     [self.navigationController.navigationBar setAlpha:1.0];
-        [UIView commitAnimations];
+        [UIView commitAnimations];*/
 }
 -(void)viewDidLayoutSubviews{
 
-    CGRect frame = _contentView.frame;
+    /*CGRect frame = _contentView.frame;
     frame.origin.x = 600;
     _contentView.frame = frame;
     
@@ -83,7 +87,7 @@
     frame.origin.x = 0;
     _contentView.frame = frame;
     
-    [UIView commitAnimations];
+    [UIView commitAnimations];*/
 }
 
 /*
@@ -98,6 +102,17 @@
 */
 
 - (IBAction)closeButtonClick:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)mapClick:(id)sender {
+}
+
+- (IBAction)callClick:(id)sender {
+}
+
+- (IBAction)facebookClick:(id)sender {
+}
+
+- (IBAction)favClick:(id)sender {
 }
 @end

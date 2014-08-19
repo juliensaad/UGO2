@@ -21,7 +21,8 @@
 @property NSString* venueId;
 
 @property NSString* phoneNumber;
-@property NSString* bestTime;
+@property (nonatomic, setter = setBestTime:) NSString* bestTime;
+@property (nonatomic, setter = setPriceText:) NSString* priceText;
 @property int icono;
 @property int price;
 

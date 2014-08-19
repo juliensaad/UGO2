@@ -18,4 +18,19 @@
     
     _location = location;
 }
+
+-(void)setPriceText:(NSString *)priceText{
+    int price = [priceText intValue];
+    
+    NSString* dollars = @"$";
+    for(int i = 0;i<price;i++){
+        dollars = [dollars stringByAppendingString:@"$"];
+    }
+
+    _priceText = [NSString stringWithFormat:@"%@ %@", lPRICING, dollars];
+}
+
+-(void)setBestTime:(NSString *)bestTime{
+    _bestTime = [NSString stringWithFormat:@"%@ %@", lBEST_TIME,bestTime];
+}
 @end

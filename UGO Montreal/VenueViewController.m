@@ -17,11 +17,6 @@
 
 @implementation VenueViewController
 
-- (void)awakeFromNib{
-    
-    
-}
-
 -(NSString *)getUniqueDeviceIdentifierAsString
 {
     
@@ -94,16 +89,16 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = NO;
+   /* self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationItem.hidesBackButton = NO;
     self.navigationItem.hidesBackButton = NO;
     self.navigationController.navigationBar.alpha = 1.0;
     [self.navigationController.navigationBar setFrame:_initialFrame];
-    NSLog(@"InitialFrame");
+    NSLog(@"InitialFrame");*/
 }
 
 -(IBAction)detailsClick:(id)sender{
-    self.navigationController.navigationItem.hidesBackButton = YES;
+    /*self.navigationController.navigationItem.hidesBackButton = YES;
     self.navigationItem.hidesBackButton = YES;
     [UIView animateWithDuration:0.7
                           delay:0.0
@@ -113,9 +108,9 @@
                          
 
                      }
-                     completion:^(BOOL finished){
+                     completion:^(BOOL finished){*/
                          [self performSegueWithIdentifier:@"detailsView" sender:self];
-                     }];
+    // }];*/
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

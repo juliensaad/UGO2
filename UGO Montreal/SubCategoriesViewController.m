@@ -64,7 +64,8 @@ int currentVenue;
                     
                 }
                 
-                v.bestTime = [t objectForKey:@"best_time"];
+                [v setBestTime:[t objectForKey:@"best_time"]];
+                [v setPriceText:[t objectForKey:@"price"]];
                 v.descriptionEn = ISFRENCH?[t objectForKey:@"description_fr"]:[t objectForKey:@"description_en"];
                 v.fbUrl = [t objectForKey:@"facebook_url"];
                 v.icono = [[t objectForKey:@"iconography"] intValue];
