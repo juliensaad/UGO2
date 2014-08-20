@@ -35,6 +35,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     [segue.destinationViewController setCategory:[NSString stringWithFormat:@"%d",_nextView]];
+    
+    [segue.destinationViewController setCategoryName:[NSString stringWithFormat:@"%@",_catName]];
 }
 
 - (void)viewDidLoad

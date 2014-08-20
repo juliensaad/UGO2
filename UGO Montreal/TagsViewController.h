@@ -8,8 +8,10 @@
 
 #import "KingViewController.h"
 
-@interface TagsViewController : KingViewController
+@interface TagsViewController : KingViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property NSString* category;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleItem;
+@property NSString* categoryName;
 @end

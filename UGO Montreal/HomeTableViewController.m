@@ -55,11 +55,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _nextView = indexPath.row;
     
+    ((HomePageViewController*)self.parentViewController).catName = [[(TypeCell*)[tableView cellForRowAtIndexPath:indexPath] typeLabel] text];
+    
     if(_nextView==3)
         _nextView = 2;
     else if(_nextView == 2)
         _nextView = 3;
     ((HomePageViewController*)self.parentViewController).nextView = _nextView;
+    
+ 
+    
     [self.parentViewController performSegueWithIdentifier:@"tagSegue" sender:self];
 
 }

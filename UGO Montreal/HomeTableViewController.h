@@ -14,4 +14,5 @@
 
 @property int nextView;
 @property NSString* category;
+@property NSString* categoryName;
 @end

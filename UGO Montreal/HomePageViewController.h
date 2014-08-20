@@ -13,5 +13,5 @@
 @property DemoMenuController* sideMenu;
 
 @property int nextView;
-
+@property NSString* catName;
 @end
