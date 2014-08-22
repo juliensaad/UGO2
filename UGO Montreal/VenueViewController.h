@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTV;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tvHeightConstraing;
+@property (weak, nonatomic) IBOutlet UIButton *favouriteButton;
 
 @property Venue* venue;
 @end

@@ -9,6 +9,7 @@
 #import "SamplePhotoBrowserViewController.h"
 #import "SDWebImageDownloader.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "NGAParallaxMotion.h"
 
 @interface SamplePhotoBrowserViewController ()
 
@@ -27,6 +28,7 @@
 {
  
     [super viewDidLoad];
+    
     
     [self createIconography];
     [self createPersonaImage];
@@ -52,7 +54,8 @@
         [self.view addSubview:_iconbg];
         
         _icon = [[UIImageView alloc] initWithImage:image];
-
+        _icon.parallaxIntensity = PARALLAX_INTENSITY;
+        _iconbg.parallaxIntensity = PARALLAX_INTENSITY;
         
         _icon.frame = CGRectMake(yScreenWidth-90, 30, 30, 30);
         _icon.contentMode = UIViewContentModeScaleAspectFit;
@@ -80,7 +83,8 @@
         _img.layer.borderWidth = 1.5;
         _img.contentMode = UIViewContentModeScaleAspectFill;
         _img.layer.masksToBounds = YES;
-       
+        _img.parallaxIntensity = PARALLAX_INTENSITY;
+        
     }];
 
 }

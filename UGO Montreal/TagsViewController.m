@@ -155,7 +155,7 @@
     //[l setTitle:[d objectForKey:ISFRENCH?@"name_fr":@"name_en"] forState:UIControlStateNormal];
     
     //[l addTarget:self action:@selector(goNext:) forControlEvents:UIControlEventTouchUpInside];
-    
+      
     NSDictionary *d = _tags[indexPath.row];
     cell.tag = [[d objectForKey:@"id"] integerValue];
     cell.typeLabel.text = [d objectForKey:ISFRENCH?@"name_fr":@"name_en"];

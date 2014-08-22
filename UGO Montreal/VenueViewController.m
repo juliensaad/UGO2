@@ -8,11 +8,15 @@
 
 #import "VenueViewController.h"
 #import "AFNetworking.h"
+#import "Animations.h"
+#import <BlurryModalSegue.h>
 
 
 @interface VenueViewController ()
 
 @property CGRect initialFrame;
+@property CGRect favouriteButtonSize;
+@property BOOL venueLiked;
 @end
 
 @implementation VenueViewController
@@ -28,20 +32,25 @@
         strApplicationUUID  = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         [SSKeychain setPassword:strApplicationUUID forService:appName account:@"incoding"];
     }
-    NSLog(@"%@", strApplicationUUID);
     return strApplicationUUID;
 }
 
 - (IBAction)favouriteClick:(id)sender {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
+
     NSDictionary *parameters = @{@"user_id": [self getUniqueDeviceIdentifierAsString],
                                  @"venue_id":_venue.venueId};
-    
-    [manager POST:[NSString stringWithFormat:@"%@/addFavourite",REQUEST_URL] parameters:parameters
+
+    [manager POST:[NSString stringWithFormat:@"%@/%@",REQUEST_URL, _venueLiked?@"deleteFavourite":@"addFavourite"] parameters:parameters
     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", [responseObject description]);
+       
+        
+        [Animations animateWithPopAndRotation:_favouriteButton fromSize:_favouriteButtonSize toSize:_venueLiked?40.0f:60.0f andNewImage:[UIImage imageNamed:_venueLiked?@"fav-btn.png":@"favourite-full.png"]];
+        _venueLiked = !_venueLiked;
+
+
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -55,6 +64,9 @@
 {
     [super viewDidLoad];
     
+
+    _venueLiked = NO;
+    _favouriteButtonSize = _favouriteButton.frame;
     [self.scrollView setContentSize:CGSizeMake(320, 0)];
     
     NSLog(@"%@",self.venue.name);
@@ -114,6 +126,16 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue isKindOfClass:[BlurryModalSegue class]])
+    {
+        BlurryModalSegue* bms = (BlurryModalSegue*)segue;
+        
+        bms.backingImageBlurRadius = @(20);
+        bms.backingImageSaturationDeltaFactor = @(.45);
+        bms.backingImageTintColor = [UIColorFromRGB(UGOTURQUOISE) colorWithAlphaComponent:.6];
+    }
+
+
     [segue.destinationViewController setVenue:_venue];
 }
 

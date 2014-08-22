@@ -9,7 +9,7 @@
 #import "ParallaxPhotoViewController.h"
 #import "SamplePhotoBrowserViewController.h"
 #import "VenueViewController.h"
-
+#import "NGAParallaxMotion.h"
 
 @interface ParallaxPhotoViewController ()
 
@@ -29,7 +29,9 @@
     
     VenueViewController *v = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueViewController"];
     v.venue = _venue;
+    
     [self setupWithTopViewController:self.sampleTopViewController andTopHeight:250 andBottomViewController:v];
+    
     
     self.delegate = self;
 }

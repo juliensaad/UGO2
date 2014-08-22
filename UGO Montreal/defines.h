@@ -36,4 +36,5 @@
 #define lBEST_TIME (ISFRENCH?@"Meilleur temps:":@"Best time:")
 #define lPRICING (ISFRENCH?@"Prix moyen:":@"Average price:")
 
+#define PARALLAX_INTENSITY 13
 #endif
