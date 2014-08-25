@@ -60,7 +60,7 @@
     personaName.font = [UIFont fontWithName:@"OpenSans-Bold" size:16.0f];
     personaName.textColor = UIColorFromRGB(UGOTURQUOISE);
     
-    UILabel* personaDesc = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING+10+face.frame.size.width, 30, self.frame.size.width-(XPADDING+10+face.frame.size.width), 50)];
+    UILabel* personaDesc = [[UILabel alloc] initWithFrame:CGRectMake(XPADDING+10+face.frame.size.width, 30, self.frame.size.width-(XPADDING+20+face.frame.size.width), 50)];
     
     personaDesc.text = p.personaDescription;
     personaDesc.textColor = UIColorFromRGB(SUBTITLE_COLOR_DARK);

@@ -138,6 +138,7 @@
 		0C1AD7201994161B00E9BCE5 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
 		0C1AD7211994161B00E9BCE5 /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
 		0C35FC1F19ABB3BD00D8ABD8 /* persona@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "persona@2x.png"; sourceTree = "<group>"; };
+		0C35FC2119ABB5E200D8ABD8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		0C4B6FBD1999151A00B80AD6 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		0C4B6FBE1999151A00B80AD6 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		0C4B6FC01999170F00B80AD6 /* 0catIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0catIcon@2x.png"; sourceTree = "<group>"; };
@@ -952,6 +953,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CBB627D19916112001A06D0 /* Base */,
+				0C35FC2119ABB5E200D8ABD8 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

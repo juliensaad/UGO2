@@ -1,0 +1,60 @@
+
+/* Class = "IBUILabel"; text = "Mokofu Sam Bar"; ObjectID = "Dsd-QB-SVD"; */
+"Dsd-QB-SVD.text" = "Mokofu Sam Bar";
+
+/* Class = "IBUIButton"; normalTitle = "Call"; ObjectID = "Ef5-VG-wGO"; */
+"Ef5-VG-wGO.normalTitle" = "Appeler";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Ezp-Fg-c8B"; */
+"Ezp-Fg-c8B.text" = "Label";
+
+/* Class = "IBUILabel"; text = "What kind of place?"; ObjectID = "FSb-vu-26Q"; */
+"FSb-vu-26Q.text" = "Quel genre d'endroit?";
+
+/* Class = "IBUIButton"; normalTitle = "View on map"; ObjectID = "Ibp-Z4-Law"; */
+"Ibp-Z4-Law.normalTitle" = "Voir sur la carte";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "QaV-1D-3PG"; */
+"QaV-1D-3PG.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Today's a new day!"; ObjectID = "Uyu-9q-0ca"; */
+"Uyu-9q-0ca.text" = "C'est un nouveau jour!";
+
+/* Class = "IBUILabel"; text = "What would you like to do?"; ObjectID = "Uzz-vI-S30"; */
+"Uzz-vI-S30.text" = "Que voulez-vous faire?";
+
+/* Class = "IBUILabel"; text = "EAT"; ObjectID = "X72-fU-cpS"; */
+"X72-fU-cpS.text" = "EAT";
+
+/* Class = "IBUILabel"; text = "Sounds good!"; ObjectID = "Y0F-zw-eqQ"; */
+"Y0F-zw-eqQ.text" = "Excellent!";
+
+/* Class = "IBUIButton"; normalTitle = "Add to favourites"; ObjectID = "fLk-hX-Nci"; */
+"fLk-hX-Nci.normalTitle" = "Ajouter aux favoris";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "gT7-QL-HmW"; */
+"gT7-QL-HmW.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Close"; ObjectID = "jIC-Rg-IpB"; */
+"jIC-Rg-IpB.normalTitle" = "Fermer";
+
+/* Class = "IBUILabel"; text = "Label Label Label Label Label Label Label Label Label Label Label Label "; ObjectID = "jc9-Kz-cZT"; */
+"jc9-Kz-cZT.text" = "Label Label Label Label Label Label Label Label Label Label Label Label ";
+
+/* Class = "IBUILabel"; text = "Label Label Label Label Label Label Label Label Label Label Label Label "; ObjectID = "leV-2h-Tuh"; */
+"leV-2h-Tuh.text" = "Label Label Label Label Label Label Label Label Label Label Label Label ";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "r29-bY-luy"; */
+"r29-bY-luy.text" = "Label";
+
+/* Class = "IBUILabel"; text = "EAT"; ObjectID = "r4R-jd-cjg"; */
+"r4R-jd-cjg.text" = "EAT";
+
+/* Class = "IBUIButton"; normalTitle = "Go to Facebook"; ObjectID = "t3p-XC-5Vg"; */
+"t3p-XC-5Vg.normalTitle" = "Facebook";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "u7c-Ex-5Gy"; */
+"u7c-Ex-5Gy.title" = "Title";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "uoy-M3-yXg"; */
+"uoy-M3-yXg.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

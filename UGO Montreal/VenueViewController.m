@@ -72,6 +72,31 @@
     
 
     _venueLiked = NO;
+    
+  
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary *parameters = @{@"user_id": [self getUniqueDeviceIdentifierAsString],
+                                 @"venue_id":_venue.venueId};
+    
+    [manager POST:[NSString stringWithFormat:@"%@/%@",REQUEST_URL, @"detectFavourite"] parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              NSLog(@"JSON: %@", [responseObject description]);
+              
+              if([[responseObject objectForKey:@"isFavourite"] intValue]==1){
+
+                  [Animations animateWithPopAndRotation:_favouriteButton fromSize:_favouriteButtonSize toSize:_venueLiked?40.0f:60.0f andNewImage:[UIImage imageNamed:_venueLiked?@"fav-btn.png":@"favourite-full.png"]];
+                   _venueLiked = YES;
+              }
+              
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error %@", error);
+          }];
+    
+    
     _favouriteButtonSize = _favouriteButton.frame;
     [self.scrollView setContentSize:CGSizeMake(320, 0)];
     
@@ -87,8 +112,8 @@
     [self.view layoutIfNeeded];
     
     CGSize sizeThatShouldFitTheContent = [_descriptionTV sizeThatFits:_descriptionTV.frame.size];
-    _tvHeightConstraing.constant = sizeThatShouldFitTheContent.height+50;
-    [self.scrollView setContentSize:CGSizeMake(320, sizeThatShouldFitTheContent.height+50+100)];
+    _tvHeightConstraing.constant = sizeThatShouldFitTheContent.height+100;
+    [self.scrollView setContentSize:CGSizeMake(320, sizeThatShouldFitTheContent.height+100+100)];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
