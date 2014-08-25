@@ -100,18 +100,23 @@
     switch (indexPath.row) {
         case 0:
             cell.typeLabel.text = TYPE0;
+            cell.subLabel.text = lcat1;
             break;
         case 1:
             cell.typeLabel.text = TYPE1;
+            cell.subLabel.text = lcat2;
             break;
         case 2:
             cell.typeLabel.text = TYPE3;
+            cell.subLabel.text = lcat4;
             break;
         case 3:
             cell.typeLabel.text = TYPE2;
+            cell.subLabel.text = lcat3;
             break;
         case 4:
             cell.typeLabel.text = TYPE4;
+            cell.subLabel.text = lcat5;
             break;
             
         default:

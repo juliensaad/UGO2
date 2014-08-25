@@ -37,23 +37,29 @@
 
 - (IBAction)favouriteClick:(id)sender {
     
+    [Animations animateWithPopAndRotation:_favouriteButton fromSize:_favouriteButtonSize toSize:_venueLiked?40.0f:60.0f andNewImage:[UIImage imageNamed:_venueLiked?@"fav-btn.png":@"favourite-full.png"]];
+    _venueLiked = !_venueLiked;
+
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
     NSDictionary *parameters = @{@"user_id": [self getUniqueDeviceIdentifierAsString],
                                  @"venue_id":_venue.venueId};
 
-    [manager POST:[NSString stringWithFormat:@"%@/%@",REQUEST_URL, _venueLiked?@"deleteFavourite":@"addFavourite"] parameters:parameters
+    [manager POST:[NSString stringWithFormat:@"%@/%@",REQUEST_URL, _venueLiked?@"addFavourite":@"deleteFavourite"] parameters:parameters
     success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", [responseObject description]);
        
         
-        [Animations animateWithPopAndRotation:_favouriteButton fromSize:_favouriteButtonSize toSize:_venueLiked?40.0f:60.0f andNewImage:[UIImage imageNamed:_venueLiked?@"fav-btn.png":@"favourite-full.png"]];
-        _venueLiked = !_venueLiked;
-
+        
 
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        [Animations animateWithPopAndRotation:_favouriteButton fromSize:_favouriteButtonSize toSize:_venueLiked?40.0f:60.0f andNewImage:[UIImage imageNamed:_venueLiked?@"fav-btn.png":@"favourite-full.png"]];
+        _venueLiked = !_venueLiked;
+        
+        
     }];
     
     

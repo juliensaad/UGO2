@@ -37,4 +37,14 @@
 #define lPRICING (ISFRENCH?@"Prix moyen:":@"Average price:")
 
 #define PARALLAX_INTENSITY 13
+
+#define lcat1 (ISFRENCH?@"Vous aimez la nourriture et nous aussi! Laissez-nous vous guider aux meilleurs assiettes en ville.":@"You love food and so do we! Let us show you the best eats in the city.")
+
+#define lcat2 (ISFRENCH?@"Vous avez soif? On vous trouve votre prochain verre.":@"Feeling thirsty? Let’s get you that refill.")
+
+#define lcat3 (ISFRENCH?@"La sueur c’est du gras qui pleure!":@"Sweat is fat crying!")
+
+#define lcat4 (ISFRENCH?@"Des boutiques uniques que vous allez adorer!":@"Unique shops you’ll love.")
+
+#define lcat5 (ISFRENCH?@"Art scene & places to study!	":@"La scène artistique & endroits pour étudier!")
 #endif

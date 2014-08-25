@@ -23,7 +23,7 @@
 {
     // Initialization code
     _typeLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:15.0f];
-    
+    _subLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

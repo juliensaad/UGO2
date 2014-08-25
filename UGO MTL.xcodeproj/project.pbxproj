@@ -14,6 +14,7 @@
 		0C1AD6BE1994010400E9BCE5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6BA1994010400E9BCE5 /* SSKeychain.m */; };
 		0C1AD6BF1994010400E9BCE5 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD6BC1994010400E9BCE5 /* SSKeychainQuery.m */; };
 		0C1AD7221994161B00E9BCE5 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AD7211994161B00E9BCE5 /* TagsViewController.m */; };
+		0C35FC2019ABB3BD00D8ABD8 /* persona@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C35FC1F19ABB3BD00D8ABD8 /* persona@2x.png */; };
 		0C4B6FBF1999151A00B80AD6 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B6FBE1999151A00B80AD6 /* HomeTableViewController.m */; };
 		0C4B6FC51999170F00B80AD6 /* 0catIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C4B6FC01999170F00B80AD6 /* 0catIcon@2x.png */; };
 		0C4B6FC61999170F00B80AD6 /* 1catIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C4B6FC11999170F00B80AD6 /* 1catIcon@2x.png */; };
@@ -136,6 +137,7 @@
 		0C1AD6BC1994010400E9BCE5 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 		0C1AD7201994161B00E9BCE5 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
 		0C1AD7211994161B00E9BCE5 /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
+		0C35FC1F19ABB3BD00D8ABD8 /* persona@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "persona@2x.png"; sourceTree = "<group>"; };
 		0C4B6FBD1999151A00B80AD6 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		0C4B6FBE1999151A00B80AD6 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		0C4B6FC01999170F00B80AD6 /* 0catIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0catIcon@2x.png"; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 		0CBB62AD199162B1001A06D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0C35FC1F19ABB3BD00D8ABD8 /* persona@2x.png */,
 				0C65A89919A7BEFE004AAC9E /* favourite-full@2x.png */,
 				0CE36DEC19A7A1BF00AD093D /* fav-btn@2x.png */,
 				0C4B6FD019991E7100B80AD6 /* hamburger@2x.png */,
@@ -780,6 +783,7 @@
 				0CF022971991C3DB008EDCBD /* OpenSans-Semibold.ttf in Resources */,
 				0CDDC33D19951C500072CC82 /* cellBgSelected@2x.png in Resources */,
 				0C4B6FC61999170F00B80AD6 /* 1catIcon@2x.png in Resources */,
+				0C35FC2019ABB3BD00D8ABD8 /* persona@2x.png in Resources */,
 				0CF0229A1991C5AB008EDCBD /* forward-arrow@2x.png in Resources */,
 				0CBB62AB199162AA001A06D0 /* background.png in Resources */,
 				0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */,
