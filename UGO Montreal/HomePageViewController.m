@@ -27,6 +27,11 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Home Screen";
+}
+
 - (IBAction)hamburgerClick:(id)sender {
 
     [_sideMenu showMenu:[[_sideMenu paperFoldView] state]==PaperFoldStateLeftUnfolded?PaperFoldStateDefault:PaperFoldStateLeftUnfolded animated:YES];

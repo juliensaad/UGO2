@@ -131,13 +131,9 @@
 
 }
 
--(void)viewWillAppear:(BOOL)animated{
-   /* self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationItem.hidesBackButton = NO;
-    self.navigationItem.hidesBackButton = NO;
-    self.navigationController.navigationBar.alpha = 1.0;
-    [self.navigationController.navigationBar setFrame:_initialFrame];
-    NSLog(@"InitialFrame");*/
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Venue Screen";
 }
 
 -(IBAction)detailsClick:(id)sender{

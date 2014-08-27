@@ -28,6 +28,13 @@ int currentVenue;
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Persona Screen";
+    self.navigationItem.title = _tagName;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -138,10 +145,6 @@ int currentVenue;
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    self.navigationItem.title = _tagName;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-}
 
 /*
 #pragma mark - Navigation

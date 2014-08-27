@@ -34,10 +34,11 @@
     return self;
 }
 
-#define FACEFRAME 50
+
 #define LABEL_HEIGHT 20
 -(void)setPersona:(Persona*)p andSelector:(SEL)selector andSender:(id)sender{
     
+    int FACEFRAME = DERY_ACTIVE?80:55;
     // Create the top view
     UIView* personaView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, PersonaHeight)];
     
@@ -70,14 +71,19 @@
     [personaView addSubview:personaName];
     [personaView addSubview:personaDesc];
     
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
     
-    [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",PERSONA_URL,p.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    if(!DERY_ACTIVE){
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
         
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        face.image = image;
+        [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",PERSONA_URL,p.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            face.image = image;
 
-    }];
+        }];
+    }else{
+        face.image = [UIImage imageNamed:@"dery.jpg"];
+    }
     
     [self addSubview:personaView];
     

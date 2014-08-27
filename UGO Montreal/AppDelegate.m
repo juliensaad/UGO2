@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DemoMenuController.h"
 #import "HomePageViewController.h"
+#import "GAI.h"
 
 @interface AppDelegate()
 
@@ -21,28 +22,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    // id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-52250247-1"];
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Logger to VERBOSE for debug information.
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-52250247-2"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO] forKey:@"dery_active"];
    
         
     // Launch side menu and Main View
     _menuController = [[DemoMenuController alloc] initWithMenuWidth:100];
     NSMutableArray *viewControllers = [NSMutableArray array];
     
-    for (NSInteger i = 0; i < 1; i++)
-    {
+   
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-       
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 
-        HomePageViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeController"];
-        UINavigationController* nc = [[UINavigationController alloc]initWithRootViewController:vc];
-        
-        [viewControllers addObject:nc];
-        
-        [vc setSideMenu:_menuController];
-    }
+    HomePageViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeController"];
+    UINavigationController* nc = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    UIViewController *ab = [storyboard instantiateViewControllerWithIdentifier:@"AboutVC"];
+    
+    [viewControllers addObject:nc];
+    [viewControllers addObject:ab];
+    
+    [vc setSideMenu:_menuController];
+    
     
     [_menuController setViewControllers:viewControllers];
     

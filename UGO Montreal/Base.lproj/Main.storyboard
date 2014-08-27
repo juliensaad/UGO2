@@ -66,11 +66,44 @@
                     </navigationBar>
                     <connections>
                         <segue destination="kJj-1W-HOI" kind="relationship" relationship="rootViewController" id="mBg-xT-z4T"/>
+                        <segue destination="scT-2o-Jfl" kind="push" id="fPP-0s-Z40"/>
+                        <segue destination="WIv-5h-bzB" kind="push" id="Mgd-Os-mZp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuU-N9-Mnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="163" y="-150"/>
+        </scene>
+        <!--About View Controller - About us-->
+        <scene sceneID="SMd-Bn-RgK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eaa-U0-7lK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AboutVC" id="scT-2o-Jfl" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GTI-PX-jpa"/>
+                        <viewControllerLayoutGuide type="bottom" id="MNP-wX-xa3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nUm-UU-rTd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About us" id="GET-6H-9NU">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="FBA-hB-Tkc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="hamburgerClick:" destination="scT-2o-Jfl" id="ImG-T0-obh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="hamburgerClick" destination="FBA-hB-Tkc" id="TYb-JM-Pwi"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="686" y="-893"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="tfF-iW-zFK">
@@ -501,6 +534,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7e6-xe-ajA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233" y="519"/>
+        </scene>
+        <!--Favourites View Controller - About us-->
+        <scene sceneID="Dk1-pc-cvA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIR-td-70k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="FavVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIv-5h-bzB" customClass="FavouritesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sz8-bz-bvr"/>
+                        <viewControllerLayoutGuide type="bottom" id="RXL-iV-c5z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HqH-3W-kIp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About us" id="yYi-gS-UWx">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="qRY-dZ-jb9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="hamburgerClick:" destination="WIv-5h-bzB" id="2Hn-Nx-98m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="hamburgerClick" destination="qRY-dZ-jb9" id="sy4-7W-OPV"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="642" y="1067"/>
         </scene>
     </scenes>
     <resources>

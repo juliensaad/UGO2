@@ -7,6 +7,8 @@
 //
 //
 #import "DemoMenuController.h"
+#import "AboutViewController.h"
+#import "FavouritesViewController.h"
 
 @interface DemoMenuController ()
 
@@ -64,8 +66,67 @@
                          otherButtonTitles:ISFRENCH?@"Redémarrer":@"Restart", nil] show];
     }else if(indexPath.row==0){
         // launch about us
+        [tableView setUserInteractionEnabled:NO];
+        CGRect startFrame = self.paperFoldView.contentView.frame;
+        CGRect endFrame = startFrame;
+        CGFloat animateDuration = 0.2;
+        startFrame.origin.x = [[UIScreen mainScreen] bounds].size.width;
+        [UIView animateWithDuration:animateDuration animations:^
+         {
+             // [self setSelectedViewController:self.viewControllers[1]];
+             AboutViewController* v = [[AboutViewController alloc] init];
+             
+             [self.viewControllers[0] pushViewController:v animated:NO];
+             
+             self.paperFoldView.contentView.frame = startFrame;
+         } completion:^(BOOL finished)
+         {
+             self.paperFoldView.contentView.frame = startFrame;
+             
+             [UIView animateWithDuration:animateDuration animations:^
+              {
+                  self.paperFoldView.contentView.frame = endFrame;
+              } completion:^(BOOL finished)
+              {
+                  self.paperFoldView.contentView.frame = endFrame;
+                  [self showMenu:NO animated:YES];
+                  [tableView setUserInteractionEnabled:YES];
+                 
+                  
+              }];
+         }];
+        
     }else{
         // launch favourites
+        [tableView setUserInteractionEnabled:NO];
+        CGRect startFrame = self.paperFoldView.contentView.frame;
+        CGRect endFrame = startFrame;
+        CGFloat animateDuration = 0.2;
+        startFrame.origin.x = [[UIScreen mainScreen] bounds].size.width;
+        [UIView animateWithDuration:animateDuration animations:^
+         {
+             // [self setSelectedViewController:self.viewControllers[1]];
+             FavouritesViewController* v = [[FavouritesViewController alloc] init];
+             
+             [self.viewControllers[0] pushViewController:v animated:NO];
+             
+             self.paperFoldView.contentView.frame = startFrame;
+         } completion:^(BOOL finished)
+         {
+             self.paperFoldView.contentView.frame = startFrame;
+             
+             [UIView animateWithDuration:animateDuration animations:^
+              {
+                  self.paperFoldView.contentView.frame = endFrame;
+              } completion:^(BOOL finished)
+              {
+                  self.paperFoldView.contentView.frame = endFrame;
+                  [self showMenu:NO animated:YES];
+                  [tableView setUserInteractionEnabled:YES];
+                  
+                  
+              }];
+         }];
     }
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
 }

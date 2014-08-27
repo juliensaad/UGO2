@@ -21,6 +21,8 @@
 
 #define ISLOGGEDIN [[[[WSingleton sharedManager] defaults]objectForKey:@"isloggedin"] isEqualToString:@"YES"]
 
+#define DERY_ACTIVE [[[NSUserDefaults standardUserDefaults] objectForKey:@"dery_active"]boolValue]
+
 #define ISFRENCH ![[[NSLocale preferredLanguages] objectAtIndex:0] isEqualToString:@"en"]
 
 #define ISIPHONE5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE

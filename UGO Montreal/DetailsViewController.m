@@ -100,6 +100,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Details Screen";
+}
 
 - (IBAction)closeButtonClick:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -32,8 +32,6 @@
     
     [self createIconography];
     [self createPersonaImage];
-
-
     [self loadVenueImages];
     [self createCustomPageControl];
 }
@@ -68,14 +66,20 @@
 }
 -(void)createPersonaImage{
    
-    
+
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     
     [manager downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/persona%@.jpg",PERSONA_URL,_venue.personaId]] options:SDWebImageCacheMemoryOnly progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        _img = [[UIImageView alloc] initWithImage:image];
-        [self.view addSubview:_img];
+        if(!DERY_ACTIVE){
+            _img = [[UIImageView alloc] initWithImage:image];
+            [self.view addSubview:_img];
+        }else{
+            _img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dery.jpg"]];
+            [self.view addSubview:_img];
+
+        }
         
         _img.frame = CGRectMake(yScreenWidth-65, 20, 50, 50);
         _img.layer.cornerRadius = _img.frame.size.width/2;
@@ -86,6 +90,7 @@
         _img.parallaxIntensity = PARALLAX_INTENSITY;
         
     }];
+
 
 }
 
