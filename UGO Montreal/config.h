@@ -53,8 +53,7 @@
 
 #define lPICKS (ISFRENCH?@"CHOIX DE LA SEMAINE":@"THIS WEEK'S PICKS")
 #define lSAIL (ISFRENCH?@"VOGUEZ LA VILLE":@"SAIL ALONG THE CITY")
-#define lFAVS (ISFRENCH?@"MES FAVORIS":@"MY FAVOURITES")
-#define lABOUT (ISFRENCH?@"    À PROPOS DE UGO":@"    ABOUT UGO")
+
 #define lUNLOCKALL (ISFRENCH?@"Pour pouvoir faire plus:":@"To unlock all features, please")
 
 #define WS_URL @"http://thirdbridge.net/ugo/"

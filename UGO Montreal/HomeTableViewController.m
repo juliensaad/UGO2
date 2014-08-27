@@ -63,7 +63,7 @@
         _nextView = 3;
     ((HomePageViewController*)self.parentViewController).nextView = _nextView;
     
- 
+    //[[(TypeCell*)[tableView cellForRowAtIndexPath:indexPath] catIcon] setFrame:CGRectMake(0,0,yScreenWidth,yScreenHeight)];
     
     [self.parentViewController performSegueWithIdentifier:@"tagSegue" sender:self];
 
@@ -127,6 +127,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.alpha = 0.0;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelay:indexPath.row*0.1];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.layer.opacity = 1;
+    [UIView commitAnimations];
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

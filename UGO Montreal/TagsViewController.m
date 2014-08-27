@@ -176,6 +176,19 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.alpha = 0.0;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelay:indexPath.row*0.1];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.layer.opacity = 1;
+    [UIView commitAnimations];
+    
+    
+}
+
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }

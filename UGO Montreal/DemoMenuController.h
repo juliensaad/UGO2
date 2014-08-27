@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PaperFoldMenuController.h"
 
-@interface DemoMenuController : PaperFoldMenuController
+@interface DemoMenuController : PaperFoldMenuController<UIAlertViewDelegate>
 
 @end

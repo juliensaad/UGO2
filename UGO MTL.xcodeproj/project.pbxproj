@@ -31,6 +31,9 @@
 		0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDA199252B9001E4A04 /* fav-button@2x.png */; };
 		0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDC199252EC001E4A04 /* info-button@2x.png */; };
 		0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C730FDF19926496001E4A04 /* DetailsViewController.m */; };
+		0C8136D119AE383F007A01F8 /* sidebar-about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8136CE19AE383F007A01F8 /* sidebar-about@2x.png */; };
+		0C8136D219AE383F007A01F8 /* sidebar-fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8136CF19AE383F007A01F8 /* sidebar-fav@2x.png */; };
+		0C8136D319AE383F007A01F8 /* sidebar-lang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8136D019AE383F007A01F8 /* sidebar-lang@2x.png */; };
 		0CBB626B19916112001A06D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626A19916112001A06D0 /* Foundation.framework */; };
 		0CBB626D19916112001A06D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626C19916112001A06D0 /* CoreGraphics.framework */; };
 		0CBB626F19916112001A06D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB626E19916112001A06D0 /* UIKit.framework */; };
@@ -160,6 +163,9 @@
 		0C730FDC199252EC001E4A04 /* info-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDE19926496001E4A04 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		0C730FDF19926496001E4A04 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		0C8136CE19AE383F007A01F8 /* sidebar-about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebar-about@2x.png"; sourceTree = "<group>"; };
+		0C8136CF19AE383F007A01F8 /* sidebar-fav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebar-fav@2x.png"; sourceTree = "<group>"; };
+		0C8136D019AE383F007A01F8 /* sidebar-lang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebar-lang@2x.png"; sourceTree = "<group>"; };
 		0CBB626719916112001A06D0 /* UGO MTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UGO MTL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB626A19916112001A06D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CBB626C19916112001A06D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -469,10 +475,10 @@
 				0CBB62CC199173CC001A06D0 /* SubCategoriesViewController.m */,
 				0CBB62C219916524001A06D0 /* VenueViewController.h */,
 				0CBB62C319916524001A06D0 /* VenueViewController.m */,
-				0CBB62B6199164C2001A06D0 /* ParallaxPhotoViewController.m */,
 				0CBB62B8199164D2001A06D0 /* SamplePhotoBrowserViewController.h */,
 				0CBB62B9199164D2001A06D0 /* SamplePhotoBrowserViewController.m */,
 				0CBB62B5199164C2001A06D0 /* ParallaxPhotoViewController.h */,
+				0CBB62B6199164C2001A06D0 /* ParallaxPhotoViewController.m */,
 				0CBB62A31991624C001A06D0 /* KingViewController.h */,
 				0CBB62A41991624C001A06D0 /* KingViewController.m */,
 				0C730FDE19926496001E4A04 /* DetailsViewController.h */,
@@ -486,6 +492,9 @@
 		0CBB62AC199162AC001A06D0 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				0C8136CE19AE383F007A01F8 /* sidebar-about@2x.png */,
+				0C8136CF19AE383F007A01F8 /* sidebar-fav@2x.png */,
+				0C8136D019AE383F007A01F8 /* sidebar-lang@2x.png */,
 				0CF022921991C3DB008EDCBD /* OpenSans-Bold.ttf */,
 				0CF022931991C3DB008EDCBD /* OpenSans-Light.ttf */,
 				0CF022981991C45A008EDCBD /* OpenSans-Regular.ttf */,
@@ -772,8 +781,10 @@
 				0CBB62C719916D24001A06D0 /* ugo-back@2x.png in Resources */,
 				0CDDC332199515DB0072CC82 /* fb_info@2x.png in Resources */,
 				0CF022CF1991C8FE008EDCBD /* placeholder.png in Resources */,
+				0C8136D219AE383F007A01F8 /* sidebar-fav@2x.png in Resources */,
 				0CBB62C019916504001A06D0 /* KICamera.png in Resources */,
 				0CF022D01991C8FE008EDCBD /* placeholder@2x.png in Resources */,
+				0C8136D319AE383F007A01F8 /* sidebar-lang@2x.png in Resources */,
 				0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */,
 				0C4B6FC81999170F00B80AD6 /* 2catIcon@2x.png in Resources */,
 				0C4B6FD119991E7100B80AD6 /* hamburger@2x.png in Resources */,
@@ -789,6 +800,7 @@
 				0CBB62AB199162AA001A06D0 /* background.png in Resources */,
 				0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */,
 				0C4B6FC71999170F00B80AD6 /* 3catIcon@2x.png in Resources */,
+				0C8136D119AE383F007A01F8 /* sidebar-about@2x.png in Resources */,
 				0C4B6FC91999170F00B80AD6 /* 4catIcon@2x.png in Resources */,
 				0C65A89A19A7BEFE004AAC9E /* favourite-full@2x.png in Resources */,
 				0CBB62C119916504001A06D0 /* KICamera@2x.png in Resources */,

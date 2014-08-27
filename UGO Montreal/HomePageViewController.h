@@ -12,6 +12,9 @@
 @interface HomePageViewController : KingViewController
 @property DemoMenuController* sideMenu;
 
+@property (weak, nonatomic) IBOutlet UIView *subContainer;
+
 @property int nextView;
 @property NSString* catName;
+
 @end

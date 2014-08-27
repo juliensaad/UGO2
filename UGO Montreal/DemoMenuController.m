@@ -21,6 +21,12 @@
     [self setOnlyAllowEdgeDrag:NO];
        
     UIView *tableBgView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [tableBgView setBackgroundColor:UIColorFromRGB(0x2f383f)];
+    
+    UIView* smallerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 95, yScreenHeight)];
+    [smallerView setBackgroundColor:UIColorFromRGB(0x3f4b54)];
+    
+    [tableBgView addSubview:smallerView];
     // [tableBgView setBackgroundColor:BLUECOLOR];
     [self.menuTableView setBackgroundView:tableBgView];
     [self.menuTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -33,7 +39,35 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90;
+    return 105;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if(buttonIndex==0){
+        
+    }else{
+        exit(0);
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 4){
+        [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:ISFRENCH?@"en":@"fr", nil] forKey:@"AppleLanguages"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:ISFRENCH?@"en":@"fr", nil] forKey:@"PrefferedLanguages"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[[UIAlertView alloc] initWithTitle:ISFRENCH?@"":@""
+                                   message:ISFRENCH?@"UGO doit redémarrer pour changer la langue.":@"UGO will restart to change the app language."
+                                  delegate:self
+                         cancelButtonTitle:ISFRENCH?@"Annuler":@"Cancel"
+                         otherButtonTitles:ISFRENCH?@"Redémarrer":@"Restart", nil] show];
+    }else if(indexPath.row==0){
+        // launch about us
+    }else{
+        // launch favourites
+    }
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,39 +81,26 @@
         if (!cell)
         {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-            [[cell textLabel] setTextColor:[UIColor whiteColor]];
-            [[cell textLabel] setHighlightedTextColor:[UIColor whiteColor]];
-            [[cell textLabel] setBackgroundColor:[UIColor clearColor]];
+           
+            [cell setBackgroundColor:[UIColor clearColor]];
             
-            UIImageView *sBgView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"cellBg.png"] stretchableImageWithLeftCapWidth:20 topCapHeight:20]];
-            [cell setSelectedBackgroundView:sBgView];
             
-            cell.backgroundColor = [UIColor clearColor];
+            btn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebar-lang"]];
+            CGRect fr = btn.frame;
+            fr.origin.x +=16;
+            fr.origin.y +=15;
+            btn.frame = fr;
+            btn.tag = 13;
             
-            textLabel = [[UILabel alloc] initWithFrame:cell.textLabel.frame];
-            
-            CGRect textFrame = textLabel.frame;
-            textFrame.origin.y += 57;
-            textFrame.size.width = 100;
-            textFrame.size.height = 30;
-            textLabel.frame = textFrame;
+            textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, btn.frame.size.height+15, 95, 20)];
+            textLabel.text = lOTHERLANG;
+            textLabel.font = [UIFont fontWithName:@"OpenSans-Semibold" size:12.0f];
             textLabel.textColor = [UIColor whiteColor];
-            
-            
-            
-            textLabel.font = [UIFont fontWithName:@"Ubuntu-Medium" size:10.0f];
-            textLabel.numberOfLines = 2;
-            textLabel.adjustsFontSizeToFitWidth = YES;
             textLabel.textAlignment = NSTextAlignmentCenter;
+            textLabel.tag = 12;
             
-            btn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"riveNord.png"]];
-            [cell addSubview:btn];
-            
-            btn.frame = CGRectMake(27,20, btn.frame.size.width,btn.frame.size.height);
-            
-            [btn setTag:13];
             [cell addSubview:textLabel];
-            [textLabel setTag:12];
+            [cell addSubview:btn];
 
         
         }else{
@@ -89,44 +110,40 @@
         
         //UIViewController *viewController = self.viewControllers[indexPath.row];
         
-        /*switch (indexPath.row) {
+        switch (indexPath.row) {
             case 0:
-                [textLabel setText:[lRIVE_NORD uppercaseString]];
-                btn.image = [UIImage imageNamed:@"riveNord.png"];
+                [textLabel setText:lABOUT];
+                btn.image = [UIImage imageNamed:@"sidebar-about"];
                 break;
             case 1:
-                [textLabel setText:[lRIVE_SUD uppercaseString]];
-                btn.image = [UIImage imageNamed:@"riveSud.png"];
+                [textLabel setText:lFAV];
+                btn.image = [UIImage imageNamed:@"sidebar-fav"];
+                
                 break;
             case 2:
-                [textLabel setText:[lHELP uppercaseString]];
-                btn.image = [UIImage imageNamed:@"info.png"];
-                
-                break;
             case 3:
-            case 4:
                 btn.hidden = YES;
-                cell.userInteractionEnabled = NO;
+                textLabel.hidden = YES;
+                cell.userInteractionEnabled = NO;               break;
+                
+            case 4:
+                [textLabel setText:lOTHERLANG];
+                btn.image = [UIImage imageNamed:@"sidebar-lang"];
                 break;
             case 5:
-               
-                [textLabel setText:[(ISFRENCH?@"English":@"Français") uppercaseString]];
-                if(ISFRENCH){
-                    btn.image = [UIImage imageNamed:@"english.png"];
-                }else{
-                    btn.image = [UIImage imageNamed:@"francais.png"];
-                }
+                btn.hidden = YES;
+                textLabel.hidden = YES;
+                cell.userInteractionEnabled = NO;
                 break;
-                
             default:
                 break;
-        }*/
+        }
         
         if (indexPath.row == self.selectedIndex)
         {
             //[tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
         }
-       
+    
         
         return cell;
     }

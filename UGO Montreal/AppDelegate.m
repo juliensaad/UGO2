@@ -26,7 +26,7 @@
    
         
     // Launch side menu and Main View
-    _menuController = [[DemoMenuController alloc] initWithMenuWidth:80];
+    _menuController = [[DemoMenuController alloc] initWithMenuWidth:100];
     NSMutableArray *viewControllers = [NSMutableArray array];
     
     for (NSInteger i = 0; i < 1; i++)
