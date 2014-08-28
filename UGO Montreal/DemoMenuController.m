@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    [self setOnlyAllowEdgeDrag:NO];
+    //  [self setOnlyAllowEdgeDrag:YES];
        
     UIView *tableBgView = [[UIView alloc] initWithFrame:self.view.bounds];
     [tableBgView setBackgroundColor:UIColorFromRGB(0x2f383f)];
@@ -73,8 +73,8 @@
         startFrame.origin.x = [[UIScreen mainScreen] bounds].size.width;
         [UIView animateWithDuration:animateDuration animations:^
          {
-             // [self setSelectedViewController:self.viewControllers[1]];
-             AboutViewController* v = [[AboutViewController alloc] init];
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+             AboutViewController* v = [storyboard instantiateViewControllerWithIdentifier:@"AboutVC"];
              
              [self.viewControllers[0] pushViewController:v animated:NO];
              
@@ -105,8 +105,8 @@
         startFrame.origin.x = [[UIScreen mainScreen] bounds].size.width;
         [UIView animateWithDuration:animateDuration animations:^
          {
-             // [self setSelectedViewController:self.viewControllers[1]];
-             FavouritesViewController* v = [[FavouritesViewController alloc] init];
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+             FavouritesViewController* v = [storyboard instantiateViewControllerWithIdentifier:@"FavVC"];
              
              [self.viewControllers[0] pushViewController:v animated:NO];
              

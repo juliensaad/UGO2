@@ -9,10 +9,21 @@
 #import "SubCategoriesViewController.h"
 #import "AFNetworking.h"
 #import "ParallaxPhotoViewController.h"
+#import "UIImage+animatedGIF.h"
+
+typedef enum ScrollDirection {
+    ScrollDirectionNone,
+    ScrollDirectionRight,
+    ScrollDirectionLeft,
+    ScrollDirectionUp,
+    ScrollDirectionDown,
+    ScrollDirectionCrazy,
+} ScrollDirection;
 
 @interface SubCategoriesViewController ()
 
-
+@property UIImageView* imv;
+@property (nonatomic, assign) CGFloat lastContentOffset;
 
 @end
 
@@ -40,6 +51,7 @@ int currentVenue;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
+    _scrollView.delegate = self;
     self.view.backgroundColor = UIColorFromRGB(UGO_LIGHTGRAY);
     _venuesAndPersonas = [[NSMutableArray alloc] init];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -118,8 +130,37 @@ int currentVenue;
         
         
     }
-    [self.scrollView setContentSize:CGSizeMake(yScreenWidth, currentY+65)];
+    
+    UIImageView* foot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"full"]];
+
+    
+    _imv =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"full"]];
+    _imv.hidden = YES;
+    NSString *path=[[NSBundle mainBundle]pathForResource:@"animation" ofType:@"gif"];
+    NSURL *url=[[NSURL alloc] initFileURLWithPath:path];
+    UIImage * testImage = [UIImage animatedImageWithAnimatedGIFURL:url];
+    _imv.animationImages = testImage.images;
+    _imv.animationDuration = testImage.duration;
+    _imv.image= [UIImage animatedImageWithAnimatedGIFURL:url].images.lastObject;
+    _imv.animationRepeatCount = 1;
+    _imv.frame = CGRectMake(20, yScreenHeight-_imv.frame.size.height-58, _imv.frame.size.width*0.9, _imv.frame.size.height*0.9);
+    
+    foot.frame = _imv.frame;
+    
+    [self.view addSubview:foot];
+    [self.view addSubview:_imv];
+
+    [self.view bringSubviewToFront:self.scrollView];
+
+    int padding = 70;
+    
+    if(currentY<yScreenHeight)
+        padding = yScreenHeight-currentY;
+    [self.scrollView setContentSize:CGSizeMake(yScreenWidth, currentY+padding-60)];
+
 }
+
+
 
 -(void)nextPage:(id)sender{
     currentVenue = [sender tag];
@@ -145,6 +186,33 @@ int currentVenue;
     // Dispose of any resources that can be recreated.
 }
 
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    ScrollDirection scrollDirection = ScrollDirectionUp;
+    if (self.lastContentOffset > scrollView.contentOffset.y)
+        scrollDirection = ScrollDirectionUp;
+    else if (self.lastContentOffset < scrollView.contentOffset.y)
+        scrollDirection = ScrollDirectionDown;
+    
+    self.lastContentOffset = scrollView.contentOffset.y;
+    
+    
+    float scrollViewHeight = scrollView.frame.size.height;
+    float scrollContentSizeHeight = scrollView.contentSize.height;
+    float scrollOffset = scrollView.contentOffset.y;
+    
+    
+    if (scrollOffset + scrollViewHeight >= scrollContentSizeHeight+70)
+    {
+        if(!_imv.isAnimating && scrollDirection == ScrollDirectionDown){
+            [_imv startAnimating];
+            _imv.hidden = NO;
+        }
+    }
+    
+}
 
 /*
 #pragma mark - Navigation

@@ -128,7 +128,7 @@
 	line.alpha = 0;
 	self.leftDividerLine = line;
 
-    self.enableLeftFoldDragging = NO;
+    self.enableLeftFoldDragging = YES;
 }
 
 - (void)onContentViewPanned:(UIPanGestureRecognizer*)gesture

@@ -11,7 +11,7 @@
 #import "Venue.h"
 #import "PersonaCard.h"
 
-@interface SubCategoriesViewController : KingViewController
+@interface SubCategoriesViewController : KingViewController<UIScrollViewDelegate>
 - (IBAction)backClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 

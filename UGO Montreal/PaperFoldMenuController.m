@@ -378,7 +378,7 @@
 
 - (void)setOnlyAllowEdgeDrag:(BOOL)onlyAllowEdgeDrag
 {
-    [self.paperFoldView setEnableHorizontalEdgeDragging:NO];
+    [self.paperFoldView setEnableHorizontalEdgeDragging:onlyAllowEdgeDrag];
 }
 
 #pragma mark - PaperFoldViewDelegate methods

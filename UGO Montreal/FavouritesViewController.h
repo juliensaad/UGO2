@@ -7,7 +7,12 @@
 //
 
 #import "KingViewController.h"
+#import "ParentTableView.h"
+#import "ParentTableViewCell.h"
+#import "SubTableView.h"
+#import "SubTableViewCell.h"
 
-@interface FavouritesViewController : KingViewController
+@interface FavouritesViewController : KingViewController<SubTableViewDelegate, SubTableViewDataSource>
+@property (weak, nonatomic) IBOutlet ParentTableView *tableView;
 
 @end
