@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NMc-Dh-jV7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t0e-Ps-ZXz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -561,6 +561,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Ufg-4N-DaT" id="xBv-9b-pY7"/>
+                        <segue destination="qnX-wa-M08" kind="push" identifier="DescriptionSegue" id="GUU-Xg-V1H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIR-td-70k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -586,4 +587,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="GUU-Xg-V1H"/>
+    </inferredMetricsTieBreakers>
 </document>

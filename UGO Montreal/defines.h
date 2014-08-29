@@ -15,6 +15,7 @@
 #define TITLE_COLOR_DARK 0x555555
 #define SUBTITLE_COLOR_DARK 0x959595
 
+
 #define PERSONA_URL @"http://thirdbridge.net/ugoadmin/assets/img/personas"
 
 #define ICON_URL @"http://thirdbridge.net/ugoadmin/assets/img/icon"

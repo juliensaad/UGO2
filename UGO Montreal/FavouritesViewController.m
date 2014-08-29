@@ -11,9 +11,13 @@
 #import "Venue.h"
 #import "AFNetworking.h"
 
+#import "ParallaxPhotoViewController.h"
+
+
 @interface FavouritesViewController ()
 
 
+@property Venue* nextVenue;
 @property NSMutableArray* favourites;
 @end
 
@@ -64,14 +68,10 @@
     
     [manager POST:[NSString stringWithFormat:@"%@/%@",REQUEST_URL, @"getFavouritesForUser"] parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              //NSLog(@"JSON: %@", [responseObject description]);
               
-              
-             
-              
-              for(NSDictionary* d in responseObject){
-                  NSLog(@"%@", [d objectForKey:@"venue"]);
-                  NSDictionary* t = [[d objectForKey:@"venue"] objectAtIndex:0];
+              for(NSDictionary* t in responseObject){
+                  //NSLog(@"%@", [d objectForKey:@"venue"]);
+                  //`NSDictionary* t = [d objectForKey:@"venue"];
                   Venue* v = [[Venue alloc] init];
                   
                   
@@ -140,6 +140,7 @@
 
 // @optional
 - (NSString *)titleLabelForParentCellAtIndex:(NSInteger)parentIndex {
+        
     switch (parentIndex) {
         case 0:
             return NSLocalizedString(@"EAT", nil);
@@ -170,14 +171,21 @@
     else if (childCount == 1)
         return [NSString stringWithFormat:ISFRENCH?@"%i endroit":@"%i place", (int)childCount];
     else
-        return ISFRENCH?@"Aucun endroit":@"No places";
+        return @"";//ISFRENCH?@"Aucun endroit":@"No places";
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [(ParallaxPhotoViewController*)segue.destinationViewController setVenue:_nextVenue];
 }
 
 #pragma mark - SubTableDataSource - Child
 
 // @optional
 - (void)tableView:(UITableView *)tableView didSelectCellAtChildIndex:(NSInteger)childIndex withInParentCellIndex:(NSInteger)parentIndex {
-    NSLog(@"COUCOU");
+    
+    _nextVenue = (Venue*)[[_favourites objectAtIndex:parentIndex] objectAtIndex:childIndex];
+    
+    [self performSegueWithIdentifier:@"DescriptionSegue" sender:self];
 }
 
 

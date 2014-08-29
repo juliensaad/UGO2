@@ -227,6 +227,12 @@
         [cell setParentIndex:parentIndex];
         cell.tag = parentIndex;
         
+        int WHITEPADDING = 20;
+        UIImageView* icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%icatIcon",indexPath.row]]];
+        icon.frame = CGRectMake(250, cell.frame.size.height/2-icon.frame.size.height/2+WHITEPADDING, icon.frame.size.width, icon.frame.size.height);
+        [cell.bgView addSubview:icon];
+
+        
         [self deselectCell:cell];
         if ([[self.expansionStates objectAtIndex:[cell parentIndex]] boolValue])
             [self selectCell:cell];
@@ -256,7 +262,7 @@
 #pragma mark - Table view - Cell Selection
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"Cocuou");
     UITableViewCell *selectedPCell = [tableView cellForRowAtIndexPath:indexPath];
     if ([selectedPCell isKindOfClass:[ParentTableViewCell class]]) {
         
@@ -358,10 +364,12 @@
     UITableViewCell *selectedCell = [self cellForRowAtIndexPath:indexPath];
     if ([selectedCell isKindOfClass:[ParentTableViewCell class]]) {
         
-        // ParentTableViewCell * pCell = (ParentTableViewCell *)selectedCell;
-        
-        // Insert code here to detect and handle child cell selection
-        // ...
+        ParentTableViewCell * pCell = (ParentTableViewCell *)selectedCell;
+
+        if ([self.tableViewDelegate respondsToSelector:@selector(tableView:didSelectCellAtChildIndex:withInParentCellIndex:)]) {
+            [self.tableViewDelegate tableView:self didSelectCellAtChildIndex:childIndex withInParentCellIndex:parentIndex];
+        }
+
     }
 }
 - (NSString *)titleLabelForChildIndex:(NSInteger)childIndex underParentIndex:(NSInteger)parentIndex {

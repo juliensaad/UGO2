@@ -77,7 +77,7 @@
 		0CBB62E8199173F5001A06D0 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DD199173F5001A06D0 /* AFURLRequestSerialization.m */; };
 		0CBB62E9199173F5001A06D0 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */; };
 		0CBB62EA199173F5001A06D0 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */; };
-		0CD376CC19AF6F7B00D84B89 /* animation@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0CD376CB19AF6F7B00D84B89 /* animation@2x.gif */; };
+		0CD376CC19AF6F7B00D84B89 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0CD376CB19AF6F7B00D84B89 /* animation.gif */; };
 		0CD376CE19AF6FAB00D84B89 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD376CD19AF6FAB00D84B89 /* libGoogleAnalyticsServices.a */; };
 		0CD376D019AF70B000D84B89 /* full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD376CF19AF70B000D84B89 /* full@2x.png */; };
 		0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDC32C199515DB0072CC82 /* call_info@2x.png */; };
@@ -264,7 +264,7 @@
 		0CBB62DF199173F5001A06D0 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		0CBB62E0199173F5001A06D0 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		0CBB62E1199173F5001A06D0 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		0CD376CB19AF6F7B00D84B89 /* animation@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animation@2x.gif"; sourceTree = "<group>"; };
+		0CD376CB19AF6F7B00D84B89 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		0CD376CD19AF6FAB00D84B89 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../Documents/GoogleAnalyticsServicesiOS_3.09/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		0CD376CF19AF70B000D84B89 /* full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full@2x.png"; sourceTree = "<group>"; };
 		0CDDC32C199515DB0072CC82 /* call_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_info@2x.png"; sourceTree = "<group>"; };
@@ -597,7 +597,7 @@
 			children = (
 				0CD376CF19AF70B000D84B89 /* full@2x.png */,
 				0C35FC1F19ABB3BD00D8ABD8 /* persona@2x.png */,
-				0CD376CB19AF6F7B00D84B89 /* animation@2x.gif */,
+				0CD376CB19AF6F7B00D84B89 /* animation.gif */,
 				0C65A89919A7BEFE004AAC9E /* favourite-full@2x.png */,
 				0CE36DEC19A7A1BF00AD093D /* fav-btn@2x.png */,
 				0C4B6FD019991E7100B80AD6 /* hamburger@2x.png */,
@@ -752,7 +752,6 @@
 		0CF022831991B41C008EDCBD /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
-				0CEA413D19AFA2730074E996 /* SubTable */,
 				0CD376CD19AF6FAB00D84B89 /* libGoogleAnalyticsServices.a */,
 				0CE3745919AE96CB004F29EA /* UIImage+animatedGIF.h */,
 				0CE3745A19AE96CB004F29EA /* UIImage+animatedGIF.m */,
@@ -782,6 +781,7 @@
 		0CF0228B1991B851008EDCBD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CEA413D19AFA2730074E996 /* SubTable */,
 				0CF0228C1991B869008EDCBD /* PersonaCard.h */,
 				0CF0228D1991B869008EDCBD /* PersonaCard.m */,
 				0C4B6FCA1999195A00B80AD6 /* TypeCell.h */,
@@ -922,7 +922,7 @@
 				0C8136D219AE383F007A01F8 /* sidebar-fav@2x.png in Resources */,
 				0CBB62C019916504001A06D0 /* KICamera.png in Resources */,
 				0CF022D01991C8FE008EDCBD /* placeholder@2x.png in Resources */,
-				0CD376CC19AF6F7B00D84B89 /* animation@2x.gif in Resources */,
+				0CD376CC19AF6F7B00D84B89 /* animation.gif in Resources */,
 				0C8136D319AE383F007A01F8 /* sidebar-lang@2x.png in Resources */,
 				0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */,
 				0C4B6FC81999170F00B80AD6 /* 2catIcon@2x.png in Resources */,

@@ -18,6 +18,7 @@
 @property (nonatomic) NSInteger parentIndex;
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *subtitleLabel;
+@property (strong, nonatomic) UIImageView *bgView;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 - (void)setCellForegroundColor:(UIColor *)foregroundColor;
