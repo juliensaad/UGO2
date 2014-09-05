@@ -73,9 +73,6 @@
 
     _venueLiked = NO;
     
-  
-    
-    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     NSDictionary *parameters = @{@"user_id": [self getUniqueDeviceIdentifierAsString],

@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if(ISFRENCH){
+        self.navigationController.topViewController.title = @"À propos";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +39,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.screenName = @"Details Screen";
+    self.screenName = @"About Screen";
 }
 
 /*
@@ -51,6 +54,6 @@
 */
 
 - (IBAction)hamburgerClick:(id)sender {
-      [_sideMenu showMenu:[[_sideMenu paperFoldView] state]==PaperFoldStateLeftUnfolded?PaperFoldStateDefault:PaperFoldStateLeftUnfolded animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

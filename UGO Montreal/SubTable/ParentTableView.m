@@ -221,7 +221,7 @@
         
         cell.subtitleLabel.text = [self.dataSourceDelegate subtitleLabelForParentCellAtIndex:parentIndex];
         [cell.subtitleLabel setFont:[UIFont fontWithName:@"OpenSans" size:13.0f]];
-        
+        cell.bgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"fav-bg-%d.jpg",indexPath.row]];
         // [cell setCellForegroundColor:[UIColor whiteColor]];
         // [cell setCellBackgroundColor:[UIColor colorWithWhite:( 30/255.0) alpha:1.0]];
         [cell setParentIndex:parentIndex];
@@ -334,7 +334,6 @@
     
     UIImageView *bottomLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, 28, 320, 2)];
     bottomLine.backgroundColor = [UIColor colorWithWhite:( 50/255.0) alpha:1.0];
-    
     UIView *view = [[UIView alloc] init];
     [view addSubview:label];
     [view addSubview:bottomLine];

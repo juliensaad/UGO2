@@ -36,7 +36,7 @@
 "gT7-QL-HmW.text" = "Label";
 
 /* Class = "IBUIButton"; normalTitle = "Close"; ObjectID = "jIC-Rg-IpB"; */
-"jIC-Rg-IpB.normalTitle" = "Fermer";
+"jIC-Rg-IpB.normalTitle" = "x";
 
 /* Class = "IBUILabel"; text = "Label Label Label Label Label Label Label Label Label Label Label Label "; ObjectID = "jc9-Kz-cZT"; */
 "jc9-Kz-cZT.text" = "Label Label Label Label Label Label Label Label Label Label Label Label ";

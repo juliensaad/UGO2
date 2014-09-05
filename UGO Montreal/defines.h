@@ -54,4 +54,6 @@
 #define lABOUT (ISFRENCH?@"À propos":@"About us")
 #define lFAV (ISFRENCH?@"Favoris":@"Favourites")
 
+#define NUMBER_OF_TYPES 4
+
 #endif

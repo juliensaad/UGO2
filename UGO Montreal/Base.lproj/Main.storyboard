@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NMc-Dh-jV7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t0e-Ps-ZXz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="163" y="-150"/>
         </scene>
-        <!--About View Controller - About us-->
+        <!--About View Controller - About-->
         <scene sceneID="SMd-Bn-RgK">
             <objects>
                 <viewController storyboardIdentifier="AboutVC" id="scT-2o-Jfl" customClass="AboutViewController" sceneMemberID="viewController">
@@ -83,20 +83,27 @@
                         <viewControllerLayoutGuide type="bottom" id="MNP-wX-xa3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nUm-UU-rTd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fav-bg-0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-GA-eCe">
+                                <rect key="frame" x="0.0" y="-52" width="320" height="206"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="About us" id="GET-6H-9NU">
-                        <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="FBA-hB-Tkc">
+                    <navigationItem key="navigationItem" title="About" id="GET-6H-9NU">
+                        <barButtonItem key="leftBarButtonItem" image="ugo-back.png" id="FBA-hB-Tkc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerClick:" destination="scT-2o-Jfl" id="ImG-T0-obh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="hamburgerClick" destination="FBA-hB-Tkc" id="TYb-JM-Pwi"/>
                     </connections>
@@ -239,13 +246,13 @@
                                 <color key="textColor" red="0.17254902420000001" green="0.69803923369999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What kind of place?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSb-vu-26Q">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What kind of place?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSb-vu-26Q">
                                 <rect key="frame" x="20" y="38" width="260" height="21"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.58431372550000005" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-IU-mIQ">
+                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-IU-mIQ">
                                 <rect key="frame" x="0.0" y="80" width="320" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.33333333329999998" alpha="0.14000000000000001" colorSpace="calibratedWhite"/>
@@ -292,6 +299,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AQa-IU-mIQ" secondAttribute="bottom" id="u2Z-Hy-DYg"/>
+                            <constraint firstItem="AQa-IU-mIQ" firstAttribute="top" secondItem="FSb-vu-26Q" secondAttribute="bottom" constant="21" id="xX3-0K-X0b"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="u7c-Ex-5Gy">
@@ -412,7 +423,7 @@
                         <outlet property="nameLabel" destination="Dsd-QB-SVD" id="dUH-xS-2Uu"/>
                         <outlet property="scrollView" destination="x0L-Ve-meC" id="x5N-JT-ObI"/>
                         <outlet property="tvHeightConstraing" destination="j0E-wE-iJe" id="elB-ZW-Frj"/>
-                        <segue destination="ohu-rQ-hHJ" kind="custom" identifier="detailsView" customClass="BlurryModalSegue" id="9ka-Bg-gES"/>
+                        <segue destination="ohu-rQ-hHJ" kind="modal" identifier="detailsView" customClass="BlurryModalSegue" id="9ka-Bg-gES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdC-Nq-UvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,29 +443,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-1z-eeq" customClass="UIScrollView">
-                                <rect key="frame" x="6" y="0.0" width="299" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="gT7-QL-HmW">
-                                        <rect key="frame" x="20" y="100" width="243" height="75"/>
+                                        <rect key="frame" x="26" y="100" width="243" height="75"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-Fg-c8B">
-                                        <rect key="frame" x="20" y="202" width="280" height="20"/>
+                                        <rect key="frame" x="26" y="202" width="280" height="20"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r29-bY-luy">
-                                        <rect key="frame" x="20" y="233" width="280" height="20"/>
+                                        <rect key="frame" x="26" y="233" width="280" height="20"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIC-Rg-IpB">
-                                        <rect key="frame" x="20" y="20" width="40" height="30"/>
-                                        <state key="normal" title="Close">
+                                        <rect key="frame" x="2" y="20" width="61" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="x">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -463,13 +475,13 @@
                                         </connections>
                                     </button>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaV-1D-3PG">
-                                        <rect key="frame" x="20" y="58" width="243" height="36"/>
+                                        <rect key="frame" x="26" y="58" width="243" height="36"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibp-Z4-Law">
-                                        <rect key="frame" x="20" y="302" width="272" height="50"/>
+                                        <rect key="frame" x="26" y="302" width="272" height="50"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="View on map" image="map_info.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -479,7 +491,7 @@
                                         </connections>
                                     </button>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-VG-wGO">
-                                        <rect key="frame" x="20" y="360" width="272" height="50"/>
+                                        <rect key="frame" x="26" y="360" width="272" height="50"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Call" image="call_info.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -489,7 +501,7 @@
                                         </connections>
                                     </button>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-XC-5Vg">
-                                        <rect key="frame" x="20" y="420" width="272" height="50"/>
+                                        <rect key="frame" x="26" y="420" width="272" height="50"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Go to Facebook" image="fb_info.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -498,8 +510,8 @@
                                             <action selector="facebookClick:" destination="ohu-rQ-hHJ" eventType="touchUpInside" id="ld5-Va-YKK"/>
                                         </connections>
                                     </button>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-hX-Nci">
-                                        <rect key="frame" x="20" y="478" width="272" height="50"/>
+                                    <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-hX-Nci">
+                                        <rect key="frame" x="26" y="478" width="272" height="50"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Add to favourites" image="fav_info.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -509,12 +521,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.17254902420000001" green="0.69803923369999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I9i-LS-btP" firstAttribute="top" secondItem="r38-1z-eeq" secondAttribute="bottom" constant="20" id="ZsD-ei-wgb"/>
                             <constraint firstItem="r38-1z-eeq" firstAttribute="top" secondItem="LMZ-yG-QMn" secondAttribute="top" id="zpN-wR-lOz"/>
                         </constraints>
                     </view>
@@ -544,20 +555,25 @@
                         <viewControllerLayoutGuide type="bottom" id="RXL-iV-c5z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HqH-3W-kIp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ufg-4N-DaT" customClass="ParentTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ufg-4N-DaT" customClass="ParentTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RXL-iV-c5z" firstAttribute="top" secondItem="Ufg-4N-DaT" secondAttribute="bottom" id="ks0-Og-JC5"/>
+                            <constraint firstItem="Ufg-4N-DaT" firstAttribute="top" secondItem="Sz8-bz-bvr" secondAttribute="bottom" id="lUx-Qh-vhv"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Favourites" id="yYi-gS-UWx"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Ufg-4N-DaT" id="xBv-9b-pY7"/>
@@ -566,12 +582,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIR-td-70k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="1067"/>
+            <point key="canvasLocation" x="642" y="1064"/>
         </scene>
     </scenes>
     <resources>
         <image name="0catIcon.png" width="60" height="60"/>
         <image name="call_info.png" width="50" height="50"/>
+        <image name="fav-bg-0.jpg" width="320" height="175"/>
         <image name="fav-btn.png" width="100" height="100"/>
         <image name="fav_info.png" width="50" height="50"/>
         <image name="fb_info.png" width="50" height="50"/>

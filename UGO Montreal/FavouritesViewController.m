@@ -10,7 +10,7 @@
 #import "TypeCell.h"
 #import "Venue.h"
 #import "AFNetworking.h"
-
+#import "SDWebImage/UIImageView+WebCache.h"
 #import "ParallaxPhotoViewController.h"
 
 
@@ -50,7 +50,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self.tableView setShowsHorizontalScrollIndicator:NO];
+    [self.tableView setShowsVerticalScrollIndicator:NO];
     [self.tableView setDataSourceDelegate:self];
     [self.tableView setTableViewDelegate:self];
     
@@ -102,6 +103,11 @@
                       [v.imgUrls addObject:[im objectForKey:@"url"]];
                   }
                   [_favourites[v.type] addObject:v];
+                  v.personaId = [t objectForKey:@"persona_id"];
+                  
+                  
+                 
+                  
               }
 
               
@@ -131,7 +137,7 @@
 // @required
 - (NSInteger)numberOfParentCells {
     
-    return 5;
+    return NUMBER_OF_TYPES;
 }
 - (NSInteger)heightForParentRows {
     
