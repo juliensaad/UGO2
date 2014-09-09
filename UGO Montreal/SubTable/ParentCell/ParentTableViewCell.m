@@ -43,7 +43,7 @@
     [self.contentView addSubview:subtitleLabel];
     
     
-    self.bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fav-bg-0"]];
+    self.bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fav-bg-0.jpg"]];
     self.frame = self.bgView.frame;
     [self.contentView addSubview:self.bgView];
     [self.contentView sendSubviewToBack:self.bgView];

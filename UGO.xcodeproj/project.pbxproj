@@ -28,6 +28,7 @@
 		0C65A89A19A7BEFE004AAC9E /* favourite-full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65A89919A7BEFE004AAC9E /* favourite-full@2x.png */; };
 		0C65A89D19A7CB6C004AAC9E /* FirstSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C65A89C19A7CB6C004AAC9E /* FirstSegue.m */; };
 		0C65A8A119A7CCDA004AAC9E /* NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C65A8A019A7CCDA004AAC9E /* NGAParallaxMotion.m */; };
+		0C69D3E719BCF4E4002058E6 /* aboutbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D3E619BCF4E4002058E6 /* aboutbg@2x.png */; };
 		0C730FDB199252B9001E4A04 /* fav-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDA199252B9001E4A04 /* fav-button@2x.png */; };
 		0C730FDD199252EC001E4A04 /* info-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C730FDC199252EC001E4A04 /* info-button@2x.png */; };
 		0C730FE019926496001E4A04 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C730FDF19926496001E4A04 /* DetailsViewController.m */; };
@@ -180,6 +181,8 @@
 		0C65A89C19A7CB6C004AAC9E /* FirstSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstSegue.m; sourceTree = "<group>"; };
 		0C65A89F19A7CCDA004AAC9E /* NGAParallaxMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAParallaxMotion.h; sourceTree = "<group>"; };
 		0C65A8A019A7CCDA004AAC9E /* NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion.m; sourceTree = "<group>"; };
+		0C69D3E619BCF4E4002058E6 /* aboutbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutbg@2x.png"; sourceTree = "<group>"; };
+		0C69D3E919BCF5A6002058E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0C730FDA199252B9001E4A04 /* fav-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDC199252EC001E4A04 /* info-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-button@2x.png"; sourceTree = "<group>"; };
 		0C730FDE19926496001E4A04 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -210,7 +213,7 @@
 		0C8136ED19AE8F19007A01F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C8136EF19AE8F24007A01F8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0C8136F319AE90F1007A01F8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		0CBB626719916112001A06D0 /* UGO MTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UGO MTL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBB626719916112001A06D0 /* UGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB626A19916112001A06D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CBB626C19916112001A06D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0CBB626E19916112001A06D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -463,7 +466,7 @@
 		0CBB626819916112001A06D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB626719916112001A06D0 /* UGO MTL.app */,
+				0CBB626719916112001A06D0 /* UGO.app */,
 				0CBB628819916112001A06D0 /* UGO MTLTests.xctest */,
 			);
 			name = Products;
@@ -586,6 +589,7 @@
 			children = (
 				0C74F92819BA662400D808CA /* fav-bg-1@2x.jpg */,
 				0C74F92919BA662400D808CA /* fav-bg-0@2x.jpg */,
+				0C69D3E619BCF4E4002058E6 /* aboutbg@2x.png */,
 				0C74F92E19BA667600D808CA /* fav-bg-2@2x.jpg */,
 				0C74F92A19BA662400D808CA /* fav-bg-3@2x.jpg */,
 				0C8136DC19AE74B9007A01F8 /* dery.jpg */,
@@ -858,7 +862,7 @@
 			);
 			name = "UGO MTL";
 			productName = "UGO Montreal";
-			productReference = 0CBB626719916112001A06D0 /* UGO MTL.app */;
+			productReference = 0CBB626719916112001A06D0 /* UGO.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0CBB628719916112001A06D0 /* UGO MTLTests */ = {
@@ -896,7 +900,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO MTL" */;
+			buildConfigurationList = 0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -950,6 +954,7 @@
 				0C8136DD19AE74B9007A01F8 /* dery.jpg in Resources */,
 				0C4B6FC61999170F00B80AD6 /* 1catIcon@2x.png in Resources */,
 				0C35FC2019ABB3BD00D8ABD8 /* persona@2x.png in Resources */,
+				0C69D3E719BCF4E4002058E6 /* aboutbg@2x.png in Resources */,
 				0CF0229A1991C5AB008EDCBD /* forward-arrow@2x.png in Resources */,
 				0CBB62AB199162AA001A06D0 /* background.png in Resources */,
 				0CDDC330199515DB0072CC82 /* call_info@2x.png in Resources */,
@@ -1128,6 +1133,7 @@
 			children = (
 				0CBB627D19916112001A06D0 /* Base */,
 				0C35FC2119ABB5E200D8ABD8 /* fr */,
+				0C69D3E919BCF5A6002058E6 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1243,7 +1249,7 @@
 					Montreal,
 					/Users/saadjulien/Documents/GoogleAnalyticsServicesiOS_3.09,
 				);
-				PRODUCT_NAME = "UGO MTL";
+				PRODUCT_NAME = UGO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1269,7 +1275,7 @@
 					Montreal,
 					/Users/saadjulien/Documents/GoogleAnalyticsServicesiOS_3.09,
 				);
-				PRODUCT_NAME = "UGO MTL";
+				PRODUCT_NAME = UGO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1317,7 +1323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO MTL" */ = {
+		0CBB626219916112001A06D0 /* Build configuration list for PBXProject "UGO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBB629719916112001A06D0 /* Debug */,

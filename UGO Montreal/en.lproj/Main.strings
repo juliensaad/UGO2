@@ -3,39 +3,45 @@
 "Dsd-QB-SVD.text" = "Mokofu Sam Bar";
 
 /* Class = "IBUIButton"; normalTitle = "Call"; ObjectID = "Ef5-VG-wGO"; */
-"Ef5-VG-wGO.normalTitle" = "Appeler";
+"Ef5-VG-wGO.normalTitle" = "Call";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "Ezp-Fg-c8B"; */
 "Ezp-Fg-c8B.text" = "Label";
 
 /* Class = "IBUILabel"; text = "What kind of place?"; ObjectID = "FSb-vu-26Q"; */
-"FSb-vu-26Q.text" = "Quel genre d'endroit?";
+"FSb-vu-26Q.text" = "What kind of place?";
+
+/* Class = "IBUINavigationItem"; title = "About"; ObjectID = "GET-6H-9NU"; */
+"GET-6H-9NU.title" = "About";
 
 /* Class = "IBUIButton"; normalTitle = "View on map"; ObjectID = "Ibp-Z4-Law"; */
-"Ibp-Z4-Law.normalTitle" = "Voir sur la carte";
+"Ibp-Z4-Law.normalTitle" = "View on map";
+
+/* Class = "IBUILabel"; text = "Our mission is to offer you an original way to rediscover the metropolis by crafting insight at every venue.\n\nGreat places. Great people. \nGreat moments."; ObjectID = "Pe8-3t-RGa"; */
+"Pe8-3t-RGa.text" = "We offer you an original way to (re)discover the metropolis by crafting insight at every venue.\n\nGreat people. Great places. \nGreat moments.";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "QaV-1D-3PG"; */
 "QaV-1D-3PG.text" = "Label";
 
 /* Class = "IBUILabel"; text = "Today's a new day!"; ObjectID = "Uyu-9q-0ca"; */
-"Uyu-9q-0ca.text" = "C'est un nouveau jour!";
+"Uyu-9q-0ca.text" = "Today's a new day!";
 
 /* Class = "IBUILabel"; text = "What would you like to do?"; ObjectID = "Uzz-vI-S30"; */
-"Uzz-vI-S30.text" = "Que voulez-vous faire?";
+"Uzz-vI-S30.text" = "What would you like to do?";
 
 /* Class = "IBUILabel"; text = "EAT"; ObjectID = "X72-fU-cpS"; */
 "X72-fU-cpS.text" = "EAT";
 
 /* Class = "IBUILabel"; text = "Sounds good!"; ObjectID = "Y0F-zw-eqQ"; */
-"Y0F-zw-eqQ.text" = "Excellent!";
+"Y0F-zw-eqQ.text" = "Sounds good!";
 
 /* Class = "IBUIButton"; normalTitle = "Add to favourites"; ObjectID = "fLk-hX-Nci"; */
-"fLk-hX-Nci.normalTitle" = "Ajouter aux favoris";
+"fLk-hX-Nci.normalTitle" = "Add to favourites";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "gT7-QL-HmW"; */
 "gT7-QL-HmW.text" = "Label";
 
-/* Class = "IBUIButton"; normalTitle = "Close"; ObjectID = "jIC-Rg-IpB"; */
+/* Class = "IBUIButton"; normalTitle = "x"; ObjectID = "jIC-Rg-IpB"; */
 "jIC-Rg-IpB.normalTitle" = "x";
 
 /* Class = "IBUILabel"; text = "Label Label Label Label Label Label Label Label Label Label Label Label "; ObjectID = "jc9-Kz-cZT"; */
@@ -50,8 +56,11 @@
 /* Class = "IBUILabel"; text = "EAT"; ObjectID = "r4R-jd-cjg"; */
 "r4R-jd-cjg.text" = "EAT";
 
+/* Class = "IBUILabel"; text = "We're a startup from Montreal that is passioned about its city."; ObjectID = "sBI-IA-6BE"; */
+"sBI-IA-6BE.text" = "We’re a Montreal startup that is passionate about its city.";
+
 /* Class = "IBUIButton"; normalTitle = "Go to Facebook"; ObjectID = "t3p-XC-5Vg"; */
-"t3p-XC-5Vg.normalTitle" = "Facebook";
+"t3p-XC-5Vg.normalTitle" = "Go to Facebook";
 
 /* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "u7c-Ex-5Gy"; */
 "u7c-Ex-5Gy.title" = "Title";
@@ -59,10 +68,5 @@
 /* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "uoy-M3-yXg"; */
 "uoy-M3-yXg.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
-
-
-/* Class = "IBUILabel"; text = "Our mission is to offer you an original way to rediscover the metropolis by crafting insight at every venue.\n\nGreat places. Great people. \nGreat moments."; ObjectID = "Pe8-3t-RGa"; */
-"Pe8-3t-RGa.text" = "Nous vous offrons une façon originale de (re)découvrir la métropole à travers l'élaboration d’un regard personnalisé dans tous les lieux sélectionnés. \n\nGreat people. Great places. \nGreat moments.";
-
-/* Class = "IBUILabel"; text = "We're a startup from Montreal that is passioned about its city."; ObjectID = "sBI-IA-6BE"; */
-"sBI-IA-6BE.text" = "Nous sommes un startup Montréalais qui est passioné par sa ville. ";
+/* Class = "IBUINavigationItem"; title = "Favourites"; ObjectID = "yYi-gS-UWx"; */
+"yYi-gS-UWx.title" = "Favourites";

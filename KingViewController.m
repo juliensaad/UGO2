@@ -33,6 +33,45 @@
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(UGOTURQUOISE);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    [self checkConnection];
+}
+
+typedef void(^connection)(BOOL);
+
+- (void)checkInternet:(connection)block
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"HEAD";
+    request.cachePolicy = NSURLRequestReloadIgnoringLocalAndRemoteCacheData;
+    request.timeoutInterval = 10.0;
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:
+     ^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         block([(NSHTTPURLResponse *)response statusCode] == 200);
+     }];
+}
+
+- (void)checkConnection
+{
+    [self checkInternet:^(BOOL internet)
+     {
+         if (internet)
+         {
+             // "Internet" aka Google
+         }
+         else
+         {
+             // No "Internet" aka no Google
+         }
+     }];
 }
 
 - (void)didReceiveMemoryWarning

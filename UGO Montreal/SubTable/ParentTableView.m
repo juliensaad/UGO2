@@ -222,6 +222,8 @@
         cell.subtitleLabel.text = [self.dataSourceDelegate subtitleLabelForParentCellAtIndex:parentIndex];
         [cell.subtitleLabel setFont:[UIFont fontWithName:@"OpenSans" size:13.0f]];
         cell.bgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"fav-bg-%d.jpg",indexPath.row]];
+        
+        NSLog(@"%@", [NSString stringWithFormat:@"fav-bg-%d.jpg",indexPath.row]);
         // [cell setCellForegroundColor:[UIColor whiteColor]];
         // [cell setCellBackgroundColor:[UIColor colorWithWhite:( 30/255.0) alpha:1.0]];
         [cell setParentIndex:parentIndex];
